@@ -37,3 +37,4 @@ Commits should introduce small chunks of changes so that developer can easily ch
 - Anything other than `camelCase` for normal javascript files, style files, images and javascript variables (const, let).
 - Anything other than `kebab-case` for naming in style files.
 - Not using `PropTypes` when component have props.
+- Using irrevelant names for variables and classes.
