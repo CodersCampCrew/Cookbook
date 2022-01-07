@@ -35,3 +35,4 @@ Commits should introduce small chunks of changes so that developer can easily ch
 - Using `.jsx` extension for React component files.
 - Anything other than `PascalCase` for React component names and React component files.
 - Anything other than `camelCase` for other javascript files, style files and images.
+- Not using `PropTypes` when component have props.
