@@ -2,13 +2,16 @@ name: yarn-lint-test
 on:
   pull_request:
     branches:
-      - dev
-      - feature
-      - feature/adding-gh-actions
+       dev
+       feature
+       feature/adding-gh-actions
+
+  workflow_dispatch:
 
 jobs:
-  use-yarn-lint-test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: yarn lint
-      - run: yarn test
+       name: run yarn lint and test
+       run: yarn lint
+       run: yarn test
