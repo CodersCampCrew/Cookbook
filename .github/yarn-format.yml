@@ -1,6 +1,6 @@
-name: yarn-lint-test
+name: yarn-format
 on:
-  pull_request:
+  push:
    
 jobs:
   build:
@@ -17,5 +17,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn lint
-    - run: yarn test
+    - run: yarn format
+    
