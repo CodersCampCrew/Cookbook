@@ -13,5 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     name: run yarn lint and test
     steps: 
-       run: yarn lint
-       run: yarn test
+      - run: | 
+          yarn lint
+          yarn test
