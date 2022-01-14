@@ -4,6 +4,7 @@ on:
     branches:
       - dev
       - feature
+      - feature/adding-gh-actions
 
 jobs:
   use-yarn-lint-test:
