@@ -1,0 +1,13 @@
+name: yarn-lint-test
+on:
+  pull_request:
+    branches:
+      - dev
+      - feature
+
+jobs:
+  use-yarn-lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn lint
+      - run: yarn test
