@@ -1,8 +1,7 @@
-import Button from "./components/Button/Button";
 
 const App = () => {
   return(
-    <Button>Send to review!</Button> 
+    <div>Hello, World!</div>
   )
 };
 
