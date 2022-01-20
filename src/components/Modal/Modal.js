@@ -1,54 +1,31 @@
-import PropTypes from 'prop-types';
-import classes from './Modal.module.scss'
+import PropTypes from "prop-types";
+import classes from "./Modal.module.scss";
+import Button from "../Button/Button";
 
 const Backdrop = () => {
-    return (
-        <div
-        className={classes.backdrop}
-        >
+  return <div className={classes.backdrop} />;
+};
 
-        </div>
-    )
-}
-
-const Filter = ({children, onClick}) => {
-    return (
-        <div
-        className={classes.filter}
-        onClick={onClick}
-        >
-            <p>{children}</p>
-        </div>
-    )
-}
-
-
-const Modal = ({className}) => {
-    return(
-        <>
-        <Backdrop/>
-            <div
-            className={className}
-            >
-                <Filter>kcal: to higher</Filter>
-                <Filter>kcal: to higher</Filter>
-                <Filter>kcal: to higher</Filter>
-                <Filter>kcal: to higher</Filter>
-            </div>
-        </>
-    )
-}
+const Modal = ({ className }) => {
+  return (
+    <>
+      <Backdrop />
+      <div className={className}>
+        <Button className={classes.button} text="kcal: lower to higher" />
+        <Button className={classes.button} text="kcal: higher to lower" />
+        <Button className={classes.button} text="time: lower to higher" />
+        <Button className={classes.button} text="time: higher to lower" />
+      </div>
+    </>
+  );
+};
 
 Modal.propTypes = {
-    className: PropTypes.string.isRequired,
-}
+  className: PropTypes.string
+};
 
 Modal.defaultProps = {
-    className: `${classes.modal}`,
-}
-
-Filter.propTypes = {
-    
-}
+  className: `${classes.modal}`
+};
 
 export default Modal;

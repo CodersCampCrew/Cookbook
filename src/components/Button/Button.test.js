@@ -1,30 +1,24 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import Button from './Button';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import Button from "./Button";
 
-describe('Button component', () => {
-    
-    test('check the button was render', () => {
-      render(<Button/>)
+describe("Button", () => {
+  test("Check the button was render", () => {
+    render(<Button />);
 
-      const buttonElement = screen.getByRole('button');
-      
-      expect(buttonElement).toBeInTheDocument()
-    })
+    const buttonElement = screen.getByRole("button");
 
-    test('make sure the onClick func is called', () => {
-      
-      const mockFn = jest.fn()
+    expect(buttonElement).toBeInTheDocument();
+  });
 
-      render(
-      <Button
-        onClick={mockFn}
-      />)
+  test("Make sure the onClick func is called", () => {
+    const mockFn = jest.fn();
 
-      const buttonElement = screen.getByRole('button')
-      userEvent.click(buttonElement)
+    render(<Button onClick={mockFn} />);
 
-      expect(mockFn).toBeCalled()
-    })
-} )
+    const buttonElement = screen.getByRole("button");
+    userEvent.click(buttonElement);
 
+    expect(mockFn).toBeCalled();
+  });
+});
