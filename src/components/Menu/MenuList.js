@@ -11,23 +11,21 @@ const MenuList = () => {
   };
 
   const bold = {
-    fontWeight: "bold" 
-  }
+    fontWeight: "bold"
+  };
 
   return (
     <div style={menuStyle}>
-       <ul>
-           <li style={bold}>- Recipes</li>
-           <li>All</li>
-           <li>Breakfast</li>
-           <li>Lunch</li>
-           <li>Dinner</li>
-           <li>Others</li>
-           <li style={bold}>- Add recipe</li>
-           <li style={bold}>- Generate menu for 2 days</li>
-       </ul>
-        
-
+      <ul>
+        <li style={bold}>- Recipes</li>
+        <li>All</li>
+        <li>Breakfast</li>
+        <li>Lunch</li>
+        <li>Dinner</li>
+        <li>Others</li>
+        <li style={bold}>- Add recipe</li>
+        <li style={bold}>- Generate menu for 2 days</li>
+      </ul>
     </div>
   );
 };
