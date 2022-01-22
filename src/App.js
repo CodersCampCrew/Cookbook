@@ -1,13 +1,7 @@
 import Navbar from "./container/Navbar/Navbar";
-import TextInput from "./components/TextInput/TextInput";
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <TextInput />
-    </>
-  );
+  return <Navbar />;
 };
 
 export default App;
