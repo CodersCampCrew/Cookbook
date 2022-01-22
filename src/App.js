@@ -1,11 +1,12 @@
-import Modal from "./components/Modal/Modal";
+import Navbar from "./container/Navbar/Navbar";
+import TextInput from "./components/TextInput/TextInput";
 
 const App = () => {
   return (
-    <div>
-      Hello, World!
-      <Modal />
-    </div>
+    <>
+      <Navbar />
+      <TextInput />
+    </>
   );
 };
 
