@@ -6,7 +6,6 @@ const Navbar = () => {
   /* 
     eslint-disable 
     no-console, 
-    react/self-closing-comp, 
     jsx-a11y/click-events-have-key-events, 
     jsx-a11y/no-noninteractive-element-interactions 
   */
@@ -24,7 +23,6 @@ const Navbar = () => {
         />
         <div className={classes.name}>The&nbsp;CookBook</div>
       </div>
-      <div></div>
       <div className={classes["search-container"]}>
         <TextInput placeholder="Search" callback={search} />
         <img

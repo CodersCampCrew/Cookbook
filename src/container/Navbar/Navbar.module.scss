@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-column: 1;
 }
 
 .search-container {
@@ -19,6 +20,7 @@
   flex-direction: row;
   align-items: center;
   justify-items: center;
+  grid-column: 3;
 }
 
 .search-icon {
