@@ -1,0 +1,25 @@
+.text-input {
+  width: 10em;
+  height: 2.5em;
+  border: 2px solid #707070;
+  border-radius: 2em;
+  text-align: center;
+  font-family: Hack, monospace;
+  font-weight: bold;
+}
+
+.icon {
+  padding: 10px;
+  padding-left: 0;
+  min-width: 50px;
+  text-align: center;
+}
+
+.textinput-container {
+  padding: 10px;
+  display: flex;
+
+  i {
+    position: absolute;
+  }
+}

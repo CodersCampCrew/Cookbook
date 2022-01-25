@@ -1,12 +1,7 @@
-import Modal from "./components/Modal/Modal";
+import Navbar from "./container/Navbar/Navbar";
 
 const App = () => {
-  return (
-    <div>
-      Hello, World!
-      <Modal />
-    </div>
-  );
+  return <Navbar />;
 };
 
 export default App;
