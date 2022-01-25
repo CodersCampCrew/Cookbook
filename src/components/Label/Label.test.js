@@ -1,5 +1,5 @@
+import { render } from "@testing-library/react";
 import Label from "./Label";
-import { render, screen } from "@testing-library/react";
 
 describe("Label", () => {
   test("Check the label was render", () => {
