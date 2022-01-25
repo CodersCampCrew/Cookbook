@@ -1,0 +1,33 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 3px solid #707070;
+}
+
+.logo-container {
+  //margin-left: 20%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  grid-column: 3;
+}
+
+.search-icon {
+  height: 2em;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
