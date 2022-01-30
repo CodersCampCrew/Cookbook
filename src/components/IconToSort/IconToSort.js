@@ -1,14 +1,24 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-// import propTypes from "prop-types";
-// import classes from './Icontosort.module.scss';
+import { RiArrowUpDownFill } from "react-icons/ri";
+import propTypes from "prop-types";
+import classes from "./IconToSort.module.scss";
 
 const Icontosort = ({ modal, setModal }) => {
   return (
-    <button type="button" onClick={setModal(!modal)}>
-      AR
+    <button
+      className={classes.icontosort}
+      type="button"
+      onClick={() => setModal(!modal)}
+    >
+      <RiArrowUpDownFill />
     </button>
   );
 };
 
 export default Icontosort;
+
+Icontosort.propTypes = {
+  modal: propTypes.bool.isRequired,
+  setModal: propTypes.func.isRequired
+};
