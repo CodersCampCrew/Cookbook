@@ -8,6 +8,7 @@ const RecommendedLabel = ({ text }) => {
       <div className={classes.recommendedStyle}>RECOMMENDED</div>
       <br />
       <div className={classes.dishName}>{text}</div>
+
     </div>
   );
 };

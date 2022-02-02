@@ -1,0 +1,53 @@
+@import "../../colors/colors";
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 45em;
+  min-width: 420px;
+  margin: 2em auto;
+  padding-right: 2em;
+  border: 1px solid $dark-gray-color;
+  border-radius: 10px;
+
+  .img {
+    width: 50%;
+    padding: 1.8em;
+    border-radius: 30px;
+  }
+
+  .describe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    border: 1px solid $dark-gray-color;
+    border-radius: 20px;
+    box-shadow: -1px -1px 7px 0 rgba(0, 0, 0, 0.5);
+    padding: 2em 3em;
+
+    .mealTitle {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    .infoKcal,
+    .infoTime,
+    .infoDesc {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: 0.3em;
+
+      .txt {
+        margin-left: 1em;
+      }
+    }
+
+    .infoDesc {
+      align-items: start;
+    }
+  }
+}

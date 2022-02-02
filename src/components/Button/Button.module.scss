@@ -1,17 +1,19 @@
+@import '../../colors/colors';
+
 .button {
   width: 20em;
   padding: 0.5em 0;
   background: none;
-  color: #aeaeae;
-  border: 4px solid #aeaeae;
+  color: $primary-color;
+  border: 4px solid $primary-color;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color, border-color, color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #1f306b;
-    border-color: #1f306b;
-    color: #fff;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $white-color;
   }
 }
