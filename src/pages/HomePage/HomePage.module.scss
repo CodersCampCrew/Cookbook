@@ -39,8 +39,12 @@
 
 @media (max-width: 850px) {
   .recommendedContainer img {
-    width: 85%;
-    margin-left: 7.5%;
+    //width: 85%;
+    //margin-left: 7.5%;
+    margin-left: 10%;
+    max-width: 80%;
+    height: 100%;
+    width: 100%;
     top: 0;
   }
   .categoriesContainer {
