@@ -5,9 +5,10 @@ import classes from "./HomePage.module.scss";
 const RecommendedLabel = ({ text }) => {
   return (
     <div className={classes.dishNameStyle}>
-      <p className={classes.recommendedStyle}>RECOMMENDED</p>
+      <div className={classes.recommendedStyle}>RECOMMENDED</div>
       <br />
-      {text}
+      <div className={classes.dishName}>{text}</div>
+
     </div>
   );
 };
