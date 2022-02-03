@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
-import classes from "./Modal.module.scss";
+
 import Button from "../Button/Button";
+import classes from "./Modal.module.scss";
 
 const Backdrop = () => {
   return <div className={classes.backdrop} />;

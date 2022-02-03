@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
+
 import classes from "./HomePage.module.scss";
 
 const RecommendedLabel = ({ text }) => {
@@ -8,7 +9,6 @@ const RecommendedLabel = ({ text }) => {
       <div className={classes.recommendedStyle}>RECOMMENDED</div>
       <br />
       <div className={classes.dishName}>{text}</div>
-
     </div>
   );
 };
