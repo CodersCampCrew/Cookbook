@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { RiArrowUpDownFill } from "react-icons/ri";
+/*import { RiArrowUpDownFill } from "react-icons/ri";*/
 import propTypes from "prop-types";
 import classes from "./IconToSort.module.scss";
 

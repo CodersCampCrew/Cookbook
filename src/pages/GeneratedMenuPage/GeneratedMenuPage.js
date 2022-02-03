@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
-import MealSnapShot from "../components/MealSnapShot/MealSnapShot";
-import SubpageTitle from "../components/SubpageTitle/SubpageTitle";
-import classes from "./BrowserPage.module.scss";
+import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
+import DayList from "../../components/DayList/DayList";
+import classes from "./GeneratedMenuPage.module.scss";
 
 const DUMMY_DISHES = [
   {
@@ -19,14 +18,22 @@ const DUMMY_DISHES = [
     kcal: "500",
     time: 5,
     desc: "great Polish dish"
+  },
+  {
+    id: "d3",
+    img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+    title: "Ramen",
+    kcal: "500",
+    time: 5,
+    desc: "great Japanese dish"
   }
 ];
 
-const BrowserPage = ({ mealTime }) => {
+const GeneratedMenuPage = () => {
   return (
     <>
       <div className={classes.centered}>
-        <SubpageTitle className={classes.title} subpageTitle={mealTime} />
+        <DayList />
       </div>
       <ul>
         {DUMMY_DISHES.map((dish) => (
@@ -43,13 +50,4 @@ const BrowserPage = ({ mealTime }) => {
     </>
   );
 };
-
-BrowserPage.propTypes = {
-  mealTime: PropTypes.string
-};
-
-BrowserPage.defaultProps = {
-  mealTime: "Meal Time"
-};
-
-export default BrowserPage;
+export default GeneratedMenuPage;
