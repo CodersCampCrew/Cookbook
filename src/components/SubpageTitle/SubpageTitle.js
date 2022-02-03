@@ -9,10 +9,12 @@ const SubpageTitle = ({ subpageTitle, className }) => {
 };
 
 export default SubpageTitle;
+
 SubpageTitle.propTypes = {
   subpageTitle: PropTypes.string,
   className: PropTypes.string.isRequired
 };
+
 SubpageTitle.defaultProps = {
   subpageTitle: "subpageTitle"
 };
