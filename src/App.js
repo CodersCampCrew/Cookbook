@@ -1,7 +1,6 @@
 // import { Routes, Route } from "react-router-dom";
 import Navbar from "./container/Navbar/Navbar";
 import BrowserPage from "./pages/BrowserPage";
-import GeneratedMenuPage from "./pages/GeneratedMenuPage/GeneratedMenuPage";
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
           <Route path="/generate-menu" element={<GenerateMenu />} />
           <Route />
         </Routes> */}
-      <GeneratedMenuPage />
       <BrowserPage />
     </>
   );

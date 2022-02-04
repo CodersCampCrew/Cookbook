@@ -5,8 +5,8 @@ const DayList = () => {
   return (
     <div className={classes.dayTitle}>
       <select className={classes.selectday}>
-        <option value="1">Day 1</option>
-        <option value="2">Day 2</option>
+        <option value="Day1">Day 1</option>
+        <option value="Day2">Day 2</option>
       </select>
     </div>
   );

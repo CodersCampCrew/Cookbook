@@ -1,6 +1,8 @@
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import DayList from "../../components/DayList/DayList";
 import classes from "./GeneratedMenuPage.module.scss";
+import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
+
 
 const DUMMY_DISHES = [
   {
@@ -9,7 +11,8 @@ const DUMMY_DISHES = [
     title: "scrambled eggs",
     kcal: "500",
     time: 5,
-    desc: "simple, tasty, day starter, to wake you up"
+    desc: "simple, tasty, day starter, to wake you up",
+    dishType: "Breakfast"
   },
   {
     id: "d2",
@@ -17,7 +20,8 @@ const DUMMY_DISHES = [
     title: "schabowy",
     kcal: "500",
     time: 5,
-    desc: "great Polish dish"
+    desc: "great Polish dish",
+    dishType: "Lunch"
   },
   {
     id: "d3",
@@ -25,7 +29,8 @@ const DUMMY_DISHES = [
     title: "Ramen",
     kcal: "500",
     time: 5,
-    desc: "great Japanese dish"
+    desc: "great Japanese dish",
+    dishType: "Dinner"
   }
 ];
 
@@ -37,6 +42,8 @@ const GeneratedMenuPage = () => {
       </div>
       <ul>
         {DUMMY_DISHES.map((dish) => (
+          <>
+          <SubpageTitle className={classes.title} subpageTitle={dish.dishType}/>
           <MealSnapShot
             id={dish.id}
             img={dish.img}
@@ -45,6 +52,7 @@ const GeneratedMenuPage = () => {
             time={dish.time}
             desc={dish.desc}
           />
+          </>
         ))}
       </ul>
     </>
