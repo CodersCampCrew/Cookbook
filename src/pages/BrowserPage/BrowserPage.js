@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import MealSnapShot from "../components/MealSnapShot/MealSnapShot";
-import SubpageTitle from "../components/SubpageTitle/SubpageTitle";
+import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
+import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import classes from "./BrowserPage.module.scss";
 
 const DUMMY_DISHES = [
