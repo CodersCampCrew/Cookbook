@@ -1,8 +1,9 @@
 import React from "react";
 import propTypes from "prop-types";
+import classes from "./Tag.module.scss"
 
 const Tag = ({ tag }) => {
-  return <ul>{tag}</ul>;
+  return <span className={classes.tag}>{tag}</span>;
 };
 export default Tag;
 Tag.propTypes = {
