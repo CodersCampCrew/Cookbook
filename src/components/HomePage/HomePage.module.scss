@@ -1,7 +1,7 @@
 .dishLabelStyle {
   font-size: 2vw;
   font-weight: bold;
-  font-family: Palatino Linotype;
+  font-family: serif, "Palatino Linotype";
   color: #707070;
   border: 1px solid #707070;
   text-align: center;
@@ -15,24 +15,24 @@
 .dishNameStyle {
   font-size: 2vw;
   font-weight: bold;
-  font-family: Palatino Linotype;
+  font-family: serif, "Palatino Linotype";
   color: #707070;
-
   border: 1px solid #707070;
   text-align: center;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-
   width: 20%;
   height: 3em;
   margin-left: 40%;
   margin-top: 13.5%;
+
   .recommendedStyle {
     grid-column: 1;
     grid-row: 1;
   }
+
   .dishName {
     grid-column: 1;
     grid-row: 2;
@@ -47,6 +47,7 @@
     margin-left: 27.5%;
     margin-top: 30%;
   }
+
   .dishLabelStyle {
     font-size: 5vw;
   }

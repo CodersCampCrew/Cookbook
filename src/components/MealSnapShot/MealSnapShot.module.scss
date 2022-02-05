@@ -1,4 +1,4 @@
-@import "../../colors/colors";
+@import "../../colors.scss";
 
 .card {
   display: flex;
@@ -25,7 +25,7 @@
     margin: auto;
     border: 1px solid $dark-gray-color;
     border-radius: 20px;
-    box-shadow: -1px -1px 7px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: -1px -1px 7px 0 rgba(0 0 0 50%);
     padding: 2em 3em;
 
     .mealTitle {

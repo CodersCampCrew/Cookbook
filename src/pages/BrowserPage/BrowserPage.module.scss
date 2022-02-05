@@ -1,0 +1,12 @@
+@import "../../colors.scss";
+
+.centered {
+  margin: 0 2em;
+}
+
+.title {
+  padding: 0.5em;
+  color: $dark-gray-color;
+  border-bottom-color: $dark-gray-color;
+  font-size: 2.5rem;
+}
