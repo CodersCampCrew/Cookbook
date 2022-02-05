@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Tag from "../../components/Tag/Tag";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
-import Label from "../../components/Label/Label";
+import TextInput from "../../components/TextInput/TextInput";
+import classes from "./GenerateMenuPage.module.scss";
+import Button from "../../components/Button/Button";
 
 const initialArray = [];
 const GenerateMenuPage = () => {
@@ -13,7 +15,6 @@ const GenerateMenuPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
   } = useForm();
   const onSubmit = (data) => console.log(data);
 
@@ -21,28 +22,30 @@ const GenerateMenuPage = () => {
     setTagsArray([...tagsArray, tagName]);
   };
   return (
-    <>
+      <div className={classes.centered}>
       <SubpageTitle subpageTitle="Generate menu" />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Label labelName="kcal" />{" "}
-        <input {...register("kcal", { required: true })} />
-        <Label labelName="time" />{" "}
-        <input {...register("time", { required: true })} />
-        <Label labelName="tags" />
-        {errors.time && <span>This field is required</span>}
-        {errors.kcal && <span>This field is required</span>}
+      <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+        <div className={classes.line}>
+        <Tag tag="kcal" />
+        <TextInput placeholder="" register={register} regName="kcal" isRequired />
+        </div>
+        <div className={classes.line}>
+        <Tag tag="time" />
+        <TextInput placeholder="" register={register} regName="time" isRequired />
+        </div>
+        <div className={classes.line}>
+        <Tag tag="tags" />
+        <input onChange={(event) => setTagName(event.target.value)} />
+      <Button onClick={addTag}/>
+      </div >
+      <div className={classes.tags}>
+      {tagsArray.map((tag) => (
+        <Tag tag={tag} />
+      ))}
+      </div>
         <button type="submit">click me</button>
       </form>
-
-      <input onChange={(event) => setTagName(event.target.value)} />
-      <button onClick={addTag} type="button">
-        add
-      </button>
-      <div>{tagName}</div>
-      {tagsArray.map(() => (
-        <Tag tag={tagsArray[tagsArray.length - 1]} />
-      ))}
-    </>
+    </div>
   );
 };
 export default GenerateMenuPage;

@@ -1,6 +1,5 @@
 // import { Routes, Route } from "react-router-dom";
 import Navbar from "./container/Navbar/Navbar";
-import BrowserPage from "./pages/BrowserPage";
 import GenerateMenuPage from "./pages/GenerateMenuPage/GenerateMenuPage";
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
           <Route />
         </Routes> */}
       <GenerateMenuPage />
-      <BrowserPage />
     </>
   );
 };
