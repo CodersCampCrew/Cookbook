@@ -14,6 +14,7 @@
     "react/jsx-filename-extension":["error",{"extensions":[".js" , ".jsx"]}],
     "react/function-component-definition":["error",{"namedComponents":"arrow-function"}],
     "arrow-body-style": "off" ,
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Tag from "../../components/Tag/Tag";
