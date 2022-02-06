@@ -24,6 +24,7 @@ const GenerateMenuPage = () => {
   const handleChange = (event) =>{
     setTagName(event.target.value)
   }
+  
 
   return (
       <div className={classes.centered}>
