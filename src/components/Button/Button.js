@@ -11,7 +11,8 @@ const Button = ({ className, onClick, text, submit }) => {
       onClick={onClick}
     >
       {text}
-    </button>)  
+    </button>
+  );
 };
 
 Button.propTypes = {

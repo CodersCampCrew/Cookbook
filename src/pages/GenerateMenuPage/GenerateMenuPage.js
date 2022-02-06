@@ -69,7 +69,7 @@ const GenerateMenuPage = () => {
           ))}
         </div>
         <div className={classes.submit}>
-        <Button submit="true" text="Generate"/>
+          <Button submit="true" text="Generate" />
         </div>
       </form>
     </div>
