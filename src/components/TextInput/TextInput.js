@@ -3,7 +3,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import classes from "./TextInput.module.scss";
 
-const TextInput = ({ placeholder, callback, register, regName, required ,onChange ,className }) => {
+const TextInput = ({
+  placeholder,
+  callback,
+  register,
+  regName,
+  required,
+  onChange,
+  className
+}) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       callback(document.getElementById("search_input").value);
@@ -40,9 +48,9 @@ TextInput.defaultProps = {
   placeholder: "_____",
   callback: () => {},
   register: () => {},
-  regName:"",
+  regName: "",
   required: false,
-  onChange: () =>{},
+  onChange: () => {},
   className: ""
 };
 

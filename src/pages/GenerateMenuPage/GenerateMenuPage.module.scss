@@ -1,26 +1,30 @@
 .centered {
-    margin: 0 2em;
-  }
-.form{
-    margin: 0 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0 2em;
+  border: 1px solid red;
 }
-.line{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+.form {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
 }
-.tags{
-    margin: 0 12em;
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  border: 1px solid red;
 }
-.button{
-    width: 4em;
+.tags {
+  margin: 0 12em;
+  border: 1px solid red;
 }
-.subpage{
-    font-size: 2em;
+.button {
+  width: 2em;
 }
-.input{
-    width: 5.6em;
+.subpage {
+  font-size: 2em;
+}
+.input {
+  width: 5.6em;
 }
