@@ -5,7 +5,6 @@
   jsx-a11y/no-noninteractive-element-interactions 
 */
 import React from "react";
-import { NavLink } from "react-router-dom";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./Navbar.module.scss";
 
@@ -24,7 +23,6 @@ const Navbar = () => {
           alt=""
         />
         <div className={classes.name}>The&nbsp;CookBook</div>
-        <NavLink to="/browser-page">BrowserPage</NavLink>
       </div>
       <div className={classes.searchContainer}>
         <TextInput placeholder="Search" callback={search} />

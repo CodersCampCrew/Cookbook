@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
-import Label from "./Label";
+import DayList from "./DayList";
 
-describe("Label", () => {
+describe("DayList", () => {
   test("Check the label was render", () => {
-    render(<Label />);
+    render(<DayList />);
 
     expect(true).toBeTruthy();
   });

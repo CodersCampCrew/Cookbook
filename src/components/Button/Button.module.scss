@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../colors.scss";
 
 .button {
   width: 20em;
@@ -9,8 +9,7 @@
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: background-color, border-color, color 0.3s ease-in-out;
 
   &:hover {
     background-color: $secondary-color;
