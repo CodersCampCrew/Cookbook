@@ -10,7 +10,7 @@ const DUMMY_DISHES = [
     title: "scrambled eggs",
     kcal: "500",
     time: 5,
-    desc: "simple, tasty, day starter, to wake you up",
+    desc: "simple, tasty, day starter, to wake you up"
   },
   {
     id: "d2",
@@ -18,7 +18,7 @@ const DUMMY_DISHES = [
     title: "schabowy",
     kcal: "500",
     time: 5,
-    desc: "great Polish dish",
+    desc: "great Polish dish"
   }
 ];
 
@@ -31,15 +31,14 @@ const BrowserPage = ({ mealTime }) => {
       <ul>
         {DUMMY_DISHES.map((dish) => (
           <MealSnapShot
-           id={dish.id}
-           img={dish.img}
-           title={dish.title}
-           kcal={dish.kcal}
-           time={dish.time}
-           desc={dish.desc}
+            id={dish.id}
+            img={dish.img}
+            title={dish.title}
+            kcal={dish.kcal}
+            time={dish.time}
+            desc={dish.desc}
           />
         ))}
-
       </ul>
     </>
   );

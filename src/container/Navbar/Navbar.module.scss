@@ -1,9 +1,10 @@
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   border-bottom: 3px solid #707070;
+  position: relative;
 }
 
 .logo-container {
@@ -30,4 +31,11 @@
 .name {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+.slideOutMenuContainer {
+  width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
