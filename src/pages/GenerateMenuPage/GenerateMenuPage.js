@@ -69,7 +69,9 @@ const GenerateMenuPage = () => {
             </span>
           ))}
         </div>
+        <div className={classes.submit}>
         <button type="submit">click me</button>
+        </div>
       </form>
     </div>
   );
