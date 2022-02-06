@@ -6,7 +6,6 @@ import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./GenerateMenuPage.module.scss";
 import Button from "../../components/Button/Button";
-import TagList from "./TagList/TagList";
 
 const GenerateMenuPage = () => {
   const [tagName, setTagName] = useState("");
@@ -69,9 +68,6 @@ const GenerateMenuPage = () => {
               </button>
             </span>
           ))}
-        </div>
-        <div>
-
         </div>
         <button type="submit">click me</button>
       </form>
