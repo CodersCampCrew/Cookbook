@@ -1,21 +1,54 @@
 .dishLabelStyle {
-  font-size: 4rem;
+  font-size: 2vw;
   font-weight: bold;
-  font-family: Palatino Linotype;
+  font-family: serif, "Palatino Linotype";
   color: #707070;
-  padding: 5em;
   border: 1px solid #707070;
   text-align: center;
+  background-color: white;
+  width: 60%;
+  height: 1.5em;
+  margin-left: 20%;
+  margin-top: 60%;
 }
+
 .dishNameStyle {
-  font-size: 4em;
+  font-size: 2vw;
   font-weight: bold;
-  font-family: Palatino Linotype;
+  font-family: serif, "Palatino Linotype";
   color: #707070;
-  padding: 5em;
   border: 1px solid #707070;
   text-align: center;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 20%;
+  height: 3em;
+  margin-left: 40%;
+  margin-top: 13.5%;
+
+  .recommendedStyle {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .dishName {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
-.recommendedStyle {
-  font-size: 6em;
+
+@media (max-width: 850px) {
+  .dishNameStyle {
+    font-size: 4vw;
+    width: 45vw;
+    height: 5em;
+    margin-left: 27.5%;
+    margin-top: 30%;
+  }
+
+  .dishLabelStyle {
+    font-size: 5vw;
+  }
 }
