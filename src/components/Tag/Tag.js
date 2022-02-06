@@ -2,13 +2,15 @@ import React from "react";
 import propTypes from "prop-types";
 import classes from "./Tag.module.scss"
 
-const Tag = ({ tag }) => {
-  return <span className={classes.tag}>{tag}</span>;
+const Tag = ({ tag, index,  }) => {
+  return <span className={classes.tag} key={index}>{tag}</span>
 };
 export default Tag;
 Tag.propTypes = {
-  tag: propTypes.string
+  tag: propTypes.string,
+  index: propTypes.number,
 };
 Tag.defaultProps = {
-  tag: "TAG"
+  tag: "TAG",
+  index: 1
 };

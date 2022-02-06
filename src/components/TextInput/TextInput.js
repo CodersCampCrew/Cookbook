@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classes from "./TextInput.module.scss";
 
-const TextInput = ({ placeholder, callback, register, regName, required }) => {
+const TextInput = ({ placeholder, callback, register, regName, required ,onChange ,className }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       callback(document.getElementById("search_input").value);
@@ -14,8 +14,9 @@ const TextInput = ({ placeholder, callback, register, regName, required }) => {
     <div className={classes["textinput-container"]}>
       <i className={classes.icon}>&gt;</i>
       <input
+        onChange={onChange}
         {...register(regName, required)}
-        className={classes["text-input"]}
+        className={`${classes["text-input"]} ${className}`}
         type="text"
         placeholder={placeholder}
         id="search_input"
@@ -30,7 +31,9 @@ TextInput.propTypes = {
   callback: PropTypes.func,
   register: PropTypes.func,
   regName: PropTypes.string,
-  required: PropTypes.bool
+  required: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired
 };
 
 TextInput.defaultProps = {

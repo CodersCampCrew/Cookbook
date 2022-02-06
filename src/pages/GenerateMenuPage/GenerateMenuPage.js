@@ -7,10 +7,10 @@ import TextInput from "../../components/TextInput/TextInput";
 import classes from "./GenerateMenuPage.module.scss";
 import Button from "../../components/Button/Button";
 
-const initialArray = [];
+
 const GenerateMenuPage = () => {
   const [tagName, setTagName] = useState("");
-  const [tagsArray, setTagsArray] = useState(initialArray);
+  const [tagsArray, setTagsArray] = useState([]);
 
   const {
     register,
@@ -21,9 +21,13 @@ const GenerateMenuPage = () => {
   const addTag = () => {
     setTagsArray([...tagsArray, tagName]);
   };
+  const handleChange = (event) =>{
+    setTagName(event.target.value)
+  }
+
   return (
       <div className={classes.centered}>
-      <SubpageTitle subpageTitle="Generate menu" />
+      <SubpageTitle className={classes.subpage} subpageTitle="Generate menu" />
       <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={classes.line}>
         <Tag tag="kcal" />
@@ -35,8 +39,8 @@ const GenerateMenuPage = () => {
         </div>
         <div className={classes.line}>
         <Tag tag="tags" />
-        <input onChange={(event) => setTagName(event.target.value)} />
-      <Button onClick={addTag}/>
+        <TextInput placeholder="" onChange={handleChange} className={classes.input}/>
+      <Button text="ADD" onClick={addTag} className={classes.button}/>
       </div >
       <div className={classes.tags}>
       {tagsArray.map((tag) => (
