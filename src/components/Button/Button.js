@@ -16,13 +16,14 @@ const Button = ({ className, onClick, text, submit }) => {
 };
 
 Button.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   submit: PropTypes.bool
 };
 
 Button.defaultProps = {
+  className: "classes.button",
   submit: false
 };
 

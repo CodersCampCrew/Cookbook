@@ -1,14 +1,14 @@
-@import "../../colors/colors";
+@import "../../colors";
 
 .card {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: $background-color;
   max-width: 45em;
   min-width: 420px;
   margin: 2em auto;
   padding-right: 2em;
-  border: 1px solid $dark-gray-color;
   border-radius: 10px;
 
   .img {
@@ -21,11 +21,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: $white-color;
     width: 50%;
     margin: auto;
-    border: 1px solid $dark-gray-color;
     border-radius: 20px;
-    box-shadow: -1px -1px 7px 0 rgba(0 0 0 50%);
+    box-shadow: -1px 2px 20px 0 rgba(0, 0, 0, 10%);
     padding: 2em 3em;
 
     .mealTitle {
