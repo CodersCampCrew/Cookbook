@@ -16,7 +16,7 @@ const GenerateMenuPage = () => {
     register,
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => console.log(data , tagsArray);
 
   const addTag = () => {
     setTagsArray([...tagsArray, tagName]);
@@ -24,7 +24,7 @@ const GenerateMenuPage = () => {
   const handleChange = (event) =>{
     setTagName(event.target.value)
   }
-  
+
 
   return (
       <div className={classes.centered}>

@@ -32,8 +32,8 @@ TextInput.propTypes = {
   register: PropTypes.func,
   regName: PropTypes.string,
   required: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
-  className: PropTypes.string.isRequired
+  onChange: PropTypes.func,
+  className: PropTypes.string
 };
 
 TextInput.defaultProps = {
@@ -41,7 +41,9 @@ TextInput.defaultProps = {
   callback: () => {},
   register: () => {},
   regName:"",
-  required: false
+  required: false,
+  onChange: () =>{},
+  className: ""
 };
 
 export default TextInput;
