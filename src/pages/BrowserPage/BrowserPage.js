@@ -1,36 +1,29 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import Comments from "../../components/Comments/Comments";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import classes from "./BrowserPage.module.scss";
 
-const DUMMY_DISHES = [
-  {
-    id: "d1",
-    img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
-    title: "scrambled eggs",
-    kcal: "500",
-    time: 5,
-    desc: "simple, tasty, day starter, to wake you up"
-  },
-  {
-    id: "d2",
-    img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
-    title: "schabowy",
-    kcal: "500",
-    time: 5,
-    desc: "great Polish dish"
-  }
-];
-
 const BrowserPage = ({ mealTime }) => {
+  const [dishes, setDishes] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/dishes")
+      .then((res) => res.json())
+      .then((json) => {
+        setDishes(json.dishes);
+      });
+  });
   return (
     <>
       <div className={classes.centered}>
         <SubpageTitle className={classes.title} subpageTitle={mealTime} />
       </div>
       <ul>
-        {DUMMY_DISHES.map((dish) => (
+        {dishes.map((dish) => (
           <MealSnapShot
+            key={dish.id}
             id={dish.id}
             img={dish.img}
             title={dish.title}
@@ -40,6 +33,7 @@ const BrowserPage = ({ mealTime }) => {
           />
         ))}
       </ul>
+      <Comments />
     </>
   );
 };

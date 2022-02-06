@@ -28,7 +28,7 @@ const MealSnapShot = ({ img, title, kcal, time, desc }) => {
 MealSnapShot.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  kcal: PropTypes.string.isRequired,
+  kcal: PropTypes.number.isRequired,
   time: PropTypes.number.isRequired,
   desc: PropTypes.string.isRequired
 };
