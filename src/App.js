@@ -1,21 +1,16 @@
-// import { Routes, Route } from "react-router-dom";
-import Navbar from "./container/Navbar/Navbar";
-import GenerateMenuPage from "./pages/GenerateMenuPage/GenerateMenuPage";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage/HomePage";
+import Layout from "./Layout";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-
-      {/* <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/browse" element={<BrowserPage />} />
-          <Route path="/add-recipe" element={<AddRecipe />} />
-          <Route path="/generate-menu" element={<GenerateMenu />} />
-          <Route />
-        </Routes> */}
-      <GenerateMenuPage />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
   );
 };
 
