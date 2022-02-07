@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 import classes from "./DayList.module.scss";
 
-const DayList = ({onChange}) => {
+const DayList = ({ onChange }) => {
   return (
     <div className={classes.dayTitle}>
       <select onChange={onChange} className={classes.selectday}>
@@ -20,5 +20,5 @@ DayList.propTypes = {
 };
 
 DayList.defaultProps = {
-  onChange: () => {},
+  onChange: () => {}
 };
