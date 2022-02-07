@@ -87,15 +87,15 @@ const GeneratedMenuPage = () => {
           <>
             <SubpageTitle
               className={classes.title}
-              subpageTitle={dish.dishType}
+              subpageTitle={dish.dishes.dishType}
             />
             <MealSnapShot
-              id={dish.id}
-              img={dish.img}
-              title={dish.title}
-              kcal={dish.kcal}
-              time={dish.time}
-              desc={dish.desc}
+              id={dish.dishes.id}
+              img={dish.dishes.img}
+              title={dish.dishes.title}
+              kcal={dish.dishes.kcal}
+              time={dish.dishes.time}
+              desc={dish.dishes.desc}
             />
           </>
         ))}
