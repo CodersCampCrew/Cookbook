@@ -43,7 +43,7 @@ const days = [
       {
         id: "d1",
         img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
-        title: "scrambled eggs",
+        title: "Ramen",
         kcal: "500",
         time: 5,
         desc: "simple, tasty, day starter, to wake you up",
@@ -52,7 +52,7 @@ const days = [
       {
         id: "d2",
         img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
-        title: "schabowy",
+        title: "Jajko na twardo",
         kcal: "500",
         time: 5,
         desc: "great Polish dish",
@@ -61,7 +61,7 @@ const days = [
       {
         id: "d3",
         img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
-        title: "Ramen",
+        title: "Kurczak",
         kcal: "500",
         time: 5,
         desc: "great Japanese dish",
@@ -72,10 +72,9 @@ const days = [
 ];
 
 const GeneratedMenuPage = () => {
-  const [day, setDay] = useState("1");
+  const [dishArray, setDishArray]=useState(days[0].dishes)
   const handleChange = (e) => {
-    setDay(e.target.value);
-    console.log(day);
+    setDishArray(days[e.target.value].dishes)
   };
   return (
     <>
@@ -83,19 +82,19 @@ const GeneratedMenuPage = () => {
         <DayList onChange={handleChange} />
       </div>
       <ul>
-        {days.map((dish) => (
+        {dishArray.map((dish) => (
           <>
             <SubpageTitle
               className={classes.title}
-              subpageTitle={dish.dishes.dishType}
+              subpageTitle={dish.dishType}
             />
             <MealSnapShot
-              id={dish.dishes.id}
-              img={dish.dishes.img}
-              title={dish.dishes.title}
-              kcal={dish.dishes.kcal}
-              time={dish.dishes.time}
-              desc={dish.dishes.desc}
+              id={dish.id}
+              img={dish.img}
+              title={dish.title}
+              kcal={dish.kcal}
+              time={dish.time}
+              desc={dish.desc}
             />
           </>
         ))}

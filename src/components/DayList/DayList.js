@@ -6,8 +6,8 @@ const DayList = ({ onChange }) => {
   return (
     <div className={classes.dayTitle}>
       <select onChange={onChange} className={classes.selectday}>
-        <option value="1">Day 1</option>
-        <option value="2">Day 2</option>
+        <option value="0">Day 1</option>
+        <option value="1">Day 2</option>
       </select>
     </div>
   );
