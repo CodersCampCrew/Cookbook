@@ -1,16 +1,14 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import classes from "./TextInput.module.scss";
 
-const TextInput = ({
+const TextInput = forwardRef(({
   placeholder,
   callback,
-  register,
-  regName,
-  required,
   onChange,
-  className
-}) => {
+  onBlur,
+  name
+}, ref) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       callback(document.getElementById("search_input").value);
@@ -21,9 +19,11 @@ const TextInput = ({
     <div className={classes["textinput-container"]}>
       <i className={classes.icon}>&gt;</i>
       <input
+        name={name}
+        ref={ref}
         onChange={onChange}
-        {...register(regName, required)}
-        className={`${classes["text-input"]} ${className}`}
+        onBlur={onBlur}
+        className={classes["text-input"]}
         type="text"
         placeholder={placeholder}
         id="search_input"
@@ -31,26 +31,22 @@ const TextInput = ({
       />
     </div>
   );
-};
+});
 
 TextInput.propTypes = {
   placeholder: PropTypes.string,
   callback: PropTypes.func,
-  register: PropTypes.func,
-  regName: PropTypes.string,
-  required: PropTypes.bool,
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  className: PropTypes.string
+  name: PropTypes.string
 };
 
 TextInput.defaultProps = {
   placeholder: "_____",
   callback: () => {},
-  register: () => {},
-  regName: "",
-  required: false,
   onChange: () => {},
-  className: ""
+  onBlur: () => {},
+  name:""
 };
 
 export default TextInput;

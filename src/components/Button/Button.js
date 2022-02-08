@@ -17,13 +17,14 @@ const Button = ({ className, onClick, text, submit }) => {
 
 Button.propTypes = {
   className: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
   submit: PropTypes.bool
 };
 
 Button.defaultProps = {
-  submit: false
+  submit: false,
+  onClick: ()=>{}
 };
 
 export default Button;
