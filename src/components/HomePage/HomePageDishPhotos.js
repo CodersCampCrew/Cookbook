@@ -12,6 +12,7 @@ const HomePageDishPhotos = ({ src }) => {
 HomePageDishPhotos.propTypes = {
   src: propTypes.string
 };
+
 HomePageDishPhotos.defaultProps = {
   src: "Null"
 };

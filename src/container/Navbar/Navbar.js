@@ -23,6 +23,7 @@ const Navbar = () => {
     //  search function placeholder to be implemented
     console.log(param);
   };
+
   return (
     <div className={classes.navbar} id="outer-container">
       <div className={classes.logoContainer}>

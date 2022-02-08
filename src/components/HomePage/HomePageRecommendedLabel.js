@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
+
 import classes from "./HomePage.module.scss";
 
 const RecommendedLabel = ({ text }) => {

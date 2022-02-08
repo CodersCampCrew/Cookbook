@@ -1,0 +1,36 @@
+.centered {
+  margin: 0 2em;
+}
+
+.form {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.tags {
+  margin: 0 12em;
+}
+
+.button {
+  width: 4.5em;
+}
+
+.subpage {
+  font-size: 2em;
+}
+
+.input {
+  width: 5.6em;
+}
+
+.submit {
+  margin-top: auto;
+}

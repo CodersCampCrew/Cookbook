@@ -1,4 +1,7 @@
 {
-    "extends": "stylelint-config-standard",
-    "customSyntax": "postcss-scss",
+  "extends": "stylelint-config-standard",
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "selector-class-pattern": "[a-zA-Z]+"
+  }
 }
