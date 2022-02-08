@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../../colors.scss";
 
 .textarea-input {
@@ -25,3 +26,32 @@
     position: absolute;
   }
 }
+=======
+@import "../../colors.scss";
+
+.textarea-input {
+  width: 100%;
+  padding: 5px 0;
+  height: 2.5em;
+  border: 1px solid $primary-color;
+  border-radius: 2em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.icon {
+  padding: 10px;
+  padding-left: 0;
+  min-width: 50px;
+  text-align: center;
+}
+
+.textarea-container {
+  padding: 10px 0;
+  display: flex;
+
+  i {
+    position: absolute;
+  }
+}
+>>>>>>> origin/dev
