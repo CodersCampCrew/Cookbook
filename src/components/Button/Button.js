@@ -24,7 +24,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   submit: false,
-  onClick: ()=>{}
+  onClick: () => {}
 };
 
 export default Button;

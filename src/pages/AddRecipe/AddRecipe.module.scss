@@ -1,29 +1,30 @@
 @import "../../colors.scss";
 
 .formWrapper {
-    margin: 0 2em;
-    padding: 0.3em 0.75em;
-    display: flex;
+  margin: 0 2em;
+  padding: 0.3em 0.75em;
+  display: flex;
 }
 
 .formItems {
-    display: block;
-    width: 100%;
-    font-size: 1em;
-    border: 1px solid $primary-color;
-    font-weight: normal;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  border: 1px solid $primary-color;
+  font-weight: normal;
 }
 
 .formSubmitItem {
-    display: block;
-    width: 100%;
-    font-size: 1em;
-    border: 2px solid $primary-color;
-    font-weight: bold;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  border: 2px solid $primary-color;
+  font-weight: bold;
 }
 
 .formRowItems {
-    display: flex;
-    justify-content: center;    
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
 }

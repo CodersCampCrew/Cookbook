@@ -1,35 +1,33 @@
 @import "../../colors.scss";
 
 .formWrapper {
-    margin: 0 2em;
-    padding: 0.3em 0.75em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+  margin: 0 2em;
+  padding: 0.3em 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .formSubmitItem {
-        padding: 0.5em 0;
-        margin: .5em 0em;
-        background: none;
-        color: $primary-color;
-        border: 0.5px solid $primary-color;
-        border-radius: 25px;
-        font-weight: normal;
-        cursor: pointer;
-        transition: background-color, border-color, color 0.3s ease-in-out;
-      
-        &:hover {
-          background-color: $secondary-color;
-          border-color: $secondary-color;
-          color: $white-color;
-        }
-      }
+  padding: 0.5em 0;
+  margin: 0.5em 0em;
+  background: none;
+  color: $primary-color;
+  border: 0.5px solid $primary-color;
+  border-radius: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background-color, border-color, color 0.3s ease-in-out;
 
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $white-color;
+  }
+}
 
 .formText {
-    padding: 2em 1em;
-    font-family: Hack, monospace;
+  padding: 2em 1em;
+  font-family: Hack, monospace;
 }
