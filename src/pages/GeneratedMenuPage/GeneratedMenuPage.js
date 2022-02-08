@@ -72,9 +72,9 @@ const days = [
 ];
 
 const GeneratedMenuPage = () => {
-  const [dishArray, setDishArray]=useState(days[0].dishes)
+  const [dishArray, setDishArray] = useState(days[0].dishes);
   const handleChange = (e) => {
-    setDishArray(days[e.target.value].dishes)
+    setDishArray(days[e.target.value].dishes);
   };
   return (
     <>

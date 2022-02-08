@@ -1,24 +1,23 @@
 @import "../../colors.scss";
 
 .image-label {
-    width: 16em;
-    padding: 0.5em 0;
-    background: none;
-    color: $primary-color;
-    border: 4px solid $primary-color;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color, border-color, color 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    &:hover {
-      background-color: $secondary-color;
-      border-color: $secondary-color;
-      color: $white-color;
-    }
+  width: 16em;
+  padding: 0.5em 0;
+  background: none;
+  color: $primary-color;
+  border: 4px solid $primary-color;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color, border-color, color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: $white-color;
+  }
 }
 .image-input {
-    display:none;
+  display: none;
 }
-
