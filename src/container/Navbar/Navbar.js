@@ -7,6 +7,7 @@
 import React from "react";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./Navbar.module.scss";
+import SlideoutMenu from "../../components/SlideoutMenu/SlideoutMenu";
 
 const Navbar = () => {
   const search = (param) => {
@@ -15,8 +16,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className={classes.navbar}>
-      <div className={classes.logoContainer}>
+    <div className={classes.navbar} id="outer-container">
+      <div className={classes["logo-container"]}>
         <img
           className={classes.logo}
           src="https://picsum.photos/100/100"
@@ -32,6 +33,9 @@ const Navbar = () => {
           alt=""
           onClick={() => search(document.getElementById("search_input").value)}
         />
+      </div>
+      <div className={classes.slideOutMenuContainer}>
+        <SlideoutMenu pageWrapId="page-wrap" outerContainer="outer-container" />
       </div>
     </div>
   );
