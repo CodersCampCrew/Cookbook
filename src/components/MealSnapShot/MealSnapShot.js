@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import classes from "./MealSnapShot.module.scss";
 import Label from "../Label/Label";
 
-const MealSnapShot = ({ img, title, kcal, time, desc }) => {
+const MealSnapShot = ({ onClick, img, title, kcal, time, desc }) => {
   return (
-    <div className={classes.card}>
+    <button type="button" onClick={onClick} className={classes.card}>
       <img className={classes.img} src={img} alt="" />
 
       <div className={classes.describe}>
@@ -21,16 +21,21 @@ const MealSnapShot = ({ img, title, kcal, time, desc }) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
 MealSnapShot.propTypes = {
+  onClick: PropTypes.func,
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   kcal: PropTypes.number.isRequired,
   time: PropTypes.number.isRequired,
   desc: PropTypes.string.isRequired
+};
+
+MealSnapShot.defaultProps = {
+  onClick: () => {}
 };
 
 export default MealSnapShot;

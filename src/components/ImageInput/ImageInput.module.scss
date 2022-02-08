@@ -11,12 +11,14 @@
   transition: background-color, border-color, color 0.3s ease-in-out;
   display: flex;
   justify-content: center;
+
   &:hover {
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: $white-color;
   }
 }
+
 .image-input {
   display: none;
 }

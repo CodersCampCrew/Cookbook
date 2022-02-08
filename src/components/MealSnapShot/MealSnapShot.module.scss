@@ -3,18 +3,19 @@
 .card {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   background-color: $background-color;
-  max-width: 45em;
-  min-width: 420px;
   margin: 2em auto;
-  padding-right: 2em;
+  border: none;
   border-radius: 10px;
+  padding: 1em 2em;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   .img {
-    width: 50%;
-    padding: 1.8em;
-    border-radius: 30px;
+    width: 100%;
+    border-radius: 40px;
   }
 
   .describe {
@@ -22,11 +23,10 @@
     align-items: center;
     flex-direction: column;
     background-color: $white-color;
-    width: 50%;
-    margin: auto;
+    margin: 0 3em;
     border-radius: 20px;
-    box-shadow: -1px 2px 20px 0 rgba(0, 0, 0, 10%);
-    padding: 2em 3em;
+    box-shadow: -1px 2px 20px 0 rgba(0 0 0 10%);
+    padding: 1em 3em;
 
     .mealTitle {
       font-size: 2rem;
