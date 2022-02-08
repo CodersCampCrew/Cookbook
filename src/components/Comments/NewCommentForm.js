@@ -22,12 +22,12 @@ const NewCommentForm = ({ addComment }) => {
     }
 
     if (enteredTextAuthor.trim() === "") {
-      setEnteredAuthorIsValid(false)
+      setEnteredAuthorIsValid(false);
       return;
     }
 
     setEnteredCommentIsValid(true);
-    setEnteredAuthorIsValid(true)
+    setEnteredAuthorIsValid(true);
 
     addComment(enteredTextComment, enteredTextAuthor);
 

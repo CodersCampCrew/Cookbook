@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import classes from "./MealSnapShot.module.scss";
 import Label from "../Label/Label";
 
-const MealSnapShot = ({onClick, img, title, kcal, time, desc }) => {
+const MealSnapShot = ({ onClick, img, title, kcal, time, desc }) => {
   return (
     <button type="button" onClick={onClick} className={classes.card}>
       <img className={classes.img} src={img} alt="" />
@@ -36,6 +36,6 @@ MealSnapShot.propTypes = {
 
 MealSnapShot.defaultProps = {
   onClick: () => {}
-}
+};
 
 export default MealSnapShot;

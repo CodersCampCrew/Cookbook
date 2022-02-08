@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import makeServer from "./server";
 
-import HomePage from "./pages/HomePage/HomePage";
+import AddRecipe from "./pages/AddRecipe/AddRecipe";
 import Layout from "./Layout";
 import BrowserPage from "./pages/BrowserPage/BrowserPage";
 
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<AddRecipe />} />
         <Route path="/browser-page" element={<BrowserPage />} />
       </Route>
     </Routes>

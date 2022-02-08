@@ -23,7 +23,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  className: '',
+  className: "",
   submit: false
 };
 
