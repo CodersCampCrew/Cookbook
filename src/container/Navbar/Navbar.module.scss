@@ -8,18 +8,27 @@
   position: relative;
 }
 
-.logo-container {
-  //margin-left: 20%;
+.logoContainer {
   padding: 10px;
+  height: 120px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  grid-column: 1;
+  .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    margin-left: 1%;
+  }
 }
 
-.search-container {
-  display: flex;
-  flex-direction: row;
+.searchContainer {
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-items: center;
   
@@ -38,8 +47,17 @@
 }
 
 .slideOutMenuContainer {
-  width: 25%;
+  width: 20%;
   position: relative;
-  display: flex;
-  justify-content: center;
+}
+
+.rightSide {
+  display: grid;
+  justify-items: right;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    grid-template-columns: auto auto;
+  }
 }
