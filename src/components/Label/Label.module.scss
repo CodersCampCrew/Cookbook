@@ -1,12 +1,14 @@
+@import "../../colors.scss";
+
 .label {
-  padding: 0.1em 0.75em;
-  height: 2.5em;
+  padding: 0.4em 0.75em;
   background: none;
-  color: #aeaeae;
-  border: 1px solid #aeaeae;
+  color: $primary-color;
+  border: 1px solid $primary-color;
   border-radius: 25px;
   font-weight: bold;
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: 1rem ;
 }

@@ -12,8 +12,8 @@
   transition: background-color, border-color, color 0.3s ease-in-out;
 
   &:hover {
-    background-color: $delete-color;
-    border-color: $delete-color;
+    background-color: $error-color;
+    border-color: $error-color;
     color: $white-color;
   }
 }

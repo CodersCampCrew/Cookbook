@@ -1,8 +1,9 @@
+@import "../../colors.scss";
+
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
   border-bottom: 3px solid #707070;
   position: relative;
 }
@@ -21,16 +22,19 @@
   flex-direction: row;
   align-items: center;
   justify-items: center;
-  grid-column: 3;
+  
 }
 
 .search-icon {
   height: 2em;
+  color: $secondary-color;
 }
 
 .name {
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: bold;
+  color: $secondary-color;
+  text-decoration: none;
 }
 
 .slideOutMenuContainer {
