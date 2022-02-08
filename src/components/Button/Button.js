@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import classes from "./Button.module.scss";
 
-const Button = ({ className, onClick, text }) => {
+const Button = ({ className, onClick, text, submit }) => {
   return (
     <button
       className={`${classes.button} ${className}`}
-      type="button"
+      type={submit ? "submit" : "button"}
       onClick={onClick}
     >
       {text}
@@ -15,13 +16,15 @@ const Button = ({ className, onClick, text }) => {
 };
 
 Button.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   onClick: PropTypes.func.isRequired,
-  text: PropTypes.string
+  text: PropTypes.string.isRequired,
+  submit: PropTypes.bool
 };
 
 Button.defaultProps = {
-  text: "Click me"
+  className: "",
+  submit: false
 };
 
 export default Button;

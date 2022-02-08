@@ -1,6 +1,7 @@
 .recommendedContainer {
   display: grid;
   padding-top: 1%;
+
   * {
     grid-column: 1;
     grid-row: 1;
@@ -17,6 +18,7 @@
 
 .dishContainer {
   display: grid;
+
   * {
     grid-column: 1;
     grid-row: 1;
@@ -39,14 +41,13 @@
 
 @media (max-width: 850px) {
   .recommendedContainer img {
-    //width: 85%;
-    //margin-left: 7.5%;
     margin-left: 10%;
     max-width: 80%;
     height: 100%;
     width: 100%;
     top: 0;
   }
+
   .categoriesContainer {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
