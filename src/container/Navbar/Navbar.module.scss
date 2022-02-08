@@ -1,41 +1,58 @@
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 70% 30%;
+  //grid-template-columns: auto auto;
   align-items: center;
   justify-items: center;
   border-bottom: 3px solid #707070;
   position: relative;
 }
 
-.logo-container {
-  //margin-left: 20%;
+.logoContainer {
   padding: 10px;
+  height: 120px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  grid-column: 1;
+  .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    margin-left: 1%;
+  }
 }
 
-.search-container {
-  display: flex;
-  flex-direction: row;
+.searchContainer {
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
-  justify-items: center;
-  grid-column: 3;
+  position: relative;
 }
 
-.search-icon {
-  height: 2em;
+.hidden {
+  opacity: 0;
 }
-
-.name {
-  font-size: 1.5em;
-  font-weight: bold;
+.visible {
+  display: block;
+  position: relative;
 }
 
 .slideOutMenuContainer {
-  width: 25%;
+  width: 20%;
   position: relative;
-  display: flex;
-  justify-content: center;
+}
+
+.rightSide {
+  display: grid;
+  justify-items: right;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    grid-template-columns: auto auto;
+  }
 }
