@@ -1,0 +1,53 @@
+@import "../../colors.scss";
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: $background-color;
+  margin: 2em auto;
+  border: none;
+  border-radius: 10px;
+  padding: 1em 2em;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .img {
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .describe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white-color;
+    margin: 0 3em;
+    border-radius: 20px;
+    box-shadow: -1px 2px 20px 0 rgba(0 0 0 10%);
+    padding: 1em 3em;
+
+    .mealTitle {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    .infoKcal,
+    .infoTime,
+    .infoDesc {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: 0.3em;
+
+      .txt {
+        margin-left: 1em;
+      }
+    }
+
+    .infoDesc {
+      align-items: start;
+    }
+  }
+}

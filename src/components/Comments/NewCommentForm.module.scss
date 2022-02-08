@@ -1,0 +1,44 @@
+@import "../../colors.scss";
+
+.form {
+  text-align: center;
+
+  .control {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.6em;
+
+    label {
+      text-align: center;
+      padding-bottom: 1em;
+    }
+
+    textarea {
+      width: 100%;
+      resize: none;
+      font-size: 1.5rem;
+      padding: 0.2em 0 0 0.4em;
+      border-radius: 5px;
+
+      &:focus {
+        background-color: $background-color;
+        outline-color: $secondary-color;
+      }
+    }
+
+    .errorText {
+      padding-bottom: 1em;
+      font-size: 1.5rem;
+      color: $error-color;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-evenly;
+
+    .button {
+      width: 15em;
+    }
+  }
+}
