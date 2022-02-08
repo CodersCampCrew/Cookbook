@@ -1,20 +1,19 @@
-/* 
-  eslint-disable 
-  no-console, 
-  jsx-a11y/click-events-have-key-events, 
-  jsx-a11y/no-noninteractive-element-interactions 
-*/
 import React from "react";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./Navbar.module.scss";
 import SlideoutMenu from "../../components/SlideoutMenu/SlideoutMenu";
 
 const Navbar = () => {
+  /* 
+    eslint-disable 
+    no-console, 
+    jsx-a11y/click-events-have-key-events, 
+    jsx-a11y/no-noninteractive-element-interactions 
+  */
   const search = (param) => {
     //  search function placeholder to be implemented
     console.log(param);
   };
-
   return (
     <div className={classes.navbar} id="outer-container">
       <div className={classes["logo-container"]}>
@@ -25,10 +24,10 @@ const Navbar = () => {
         />
         <div className={classes.name}>The&nbsp;CookBook</div>
       </div>
-      <div className={classes.searchContainer}>
+      <div className={classes["search-container"]}>
         <TextInput placeholder="Search" callback={search} />
         <img
-          className={classes.searchIcon}
+          className={classes["search-icon"]}
           src="assets/magnifying-glass-solid.svg"
           alt=""
           onClick={() => search(document.getElementById("search_input").value)}
