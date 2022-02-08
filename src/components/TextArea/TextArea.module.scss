@@ -3,11 +3,11 @@
 .textarea-input {
   width: 100%;
   padding: 5px 0;
-  height: 2.5em;
   border: 1px solid $primary-color;
-  border-radius: 2em;
+  border-radius: 10px;
   text-align: center;
   font-weight: normal;
+  resize: none;
 }
 
 .icon {
@@ -20,8 +20,5 @@
 .textarea-container {
   padding: 10px 0;
   display: flex;
-
-  i {
-    position: absolute;
-  }
+  align-items: baseline;
 }

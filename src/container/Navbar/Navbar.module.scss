@@ -1,9 +1,9 @@
+@import "../../colors.scss";
+
 .navbar {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  //grid-template-columns: auto auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
   border-bottom: 3px solid #707070;
   position: relative;
 }
@@ -30,15 +30,20 @@
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  position: relative;
+  justify-items: center;
+  
 }
 
-.hidden {
-  opacity: 0;
+.search-icon {
+  height: 2em;
+  color: $secondary-color;
 }
-.visible {
-  display: block;
-  position: relative;
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $secondary-color;
+  text-decoration: none;
 }
 
 .slideOutMenuContainer {
