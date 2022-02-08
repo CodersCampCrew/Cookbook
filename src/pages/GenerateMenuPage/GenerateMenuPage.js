@@ -5,6 +5,7 @@ import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./GenerateMenuPage.module.scss";
 import Button from "../../components/Button/Button";
+import TagList from "../../components/TagList/TagList";
 
 const GenerateMenuPage = () => {
   const [tagName, setTagName] = useState("");
@@ -14,11 +15,13 @@ const GenerateMenuPage = () => {
   const onSubmit = (data) => console.log(data, tagsArray);
 
   const addTag = () => {
-    if (tagsArray.includes(tagName)) {
-      alert("Tag already exist");
-    } else {
-      setTagsArray([...tagsArray, tagName]);
-    }
+    if (tagName.length === 0 || tagName.length < 3 || tagName.length > 3) {
+      alert("Tag must have 3 letters and can't be empty");
+    } else if (tagsArray.includes(tagName)) {
+        alert("Tag already exist");
+      } else {
+        setTagsArray([...tagsArray, tagName]);
+      }
   };
   const handleChange = (event) => {
     setTagName(event.target.value);
@@ -59,14 +62,11 @@ const GenerateMenuPage = () => {
           <Button text="ADD" onClick={addTag} className={classes.button} />
         </div>
         <div className={classes.tags}>
-          {tagsArray.map((tag) => (
-            <span key={tag}>
-              <Tag tag={tag} />
-              <button type="button" onClick={() => handleRemove(tag)}>
-                X
-              </button>
-            </span>
-          ))}
+          <TagList
+            tagsArray={tagsArray}
+            handleRemove={handleRemove}
+            className={classes.tag}
+          />
         </div>
         <div className={classes.submit}>
           <Button submit="true" text="Generate" />
