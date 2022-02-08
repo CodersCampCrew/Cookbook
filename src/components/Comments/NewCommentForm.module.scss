@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../colors.scss";
 
 .form {
   text-align: center;
@@ -23,6 +23,12 @@
         background-color: $background-color;
         outline-color: $secondary-color;
       }
+    }
+
+    .errorText {
+      padding-bottom: 1em;
+      font-size: 1.5rem;
+      color: $error-color;
     }
   }
 
