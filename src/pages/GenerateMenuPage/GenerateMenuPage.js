@@ -18,10 +18,10 @@ const GenerateMenuPage = () => {
     if (tagName.length === 0 || tagName.length < 3 || tagName.length > 3) {
       alert("Tag must have 3 letters and can't be empty");
     } else if (tagsArray.includes(tagName)) {
-        alert("Tag already exist");
-      } else {
-        setTagsArray([...tagsArray, tagName]);
-      }
+      alert("Tag already exist");
+    } else {
+      setTagsArray([...tagsArray, tagName]);
+    }
   };
   const handleChange = (event) => {
     setTagName(event.target.value);
