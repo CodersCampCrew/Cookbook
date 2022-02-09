@@ -1,12 +1,23 @@
+@import "../../colors.scss";
+
 .menu {
-  background-color: white;
-  border: 3px solid #707070;
+  background-color: #2d5297;
+
+  .link {
+    text-decoration: none;
+  }
 
   .menuItem {
-    font-size: 2em;
-    padding: 10px;
+    font-size: 2rem;
+    padding: 15px;
     display: flex;
+    color: $white-color;
     justify-content: center;
     align-items: center;
+    transition: background-color .3s ease-in;
+
+    &:hover{
+      background-color: $primary-color;
+    }
   }
 }
