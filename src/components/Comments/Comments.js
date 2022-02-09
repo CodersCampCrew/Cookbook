@@ -1,30 +1,18 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import CommentsList from "./CommentsList";
 import NewCommentForm from "./NewCommentForm";
 import Button from "../Button/Button";
 import classes from "./Comments.module.scss";
 
-const Comments = () => {
-  const [commentList, setCommentList] = useState([]);
-
+const Comments = ({ comments }) => {
   const [isAddingComment, setIsAddingComment] = useState(false);
 
   const startAddCommentHandler = () => {
     setIsAddingComment(true);
   };
 
-  const addComment = (commentText, commentAuthor) => {
-    setCommentList((prevCommentList) => {
-      return [
-        ...prevCommentList,
-        {
-          text: commentText,
-          author: commentAuthor,
-          id: Math.random().toString()
-        }
-      ];
-    });
-  };
+  const addComment = () => {};
 
   return (
     <section className={classes.comments}>
@@ -37,9 +25,13 @@ const Comments = () => {
         />
       )}
       {isAddingComment && <NewCommentForm addComment={addComment} />}
-      <CommentsList comments={commentList} />
+      <CommentsList comments={comments} />
     </section>
   );
+};
+
+Comments.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.shape({})).isRequired
 };
 
 export default Comments;
