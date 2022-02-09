@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/recipes/*" element={<BrowserPage />} />
         <Route path="/dishes/:dishId" element={<RecipePage />} />
         <Route path="/generate_menu" element={<GenerateMenuPage />} />
-        <Route path="/genereted_menu" element={<GeneratedMenuPage />} />
+        <Route path="/generated_menu" element={<GeneratedMenuPage />} />
       </Route>
     </Routes>
   );
