@@ -11,13 +11,14 @@ const TextArea = forwardRef(
     };
 
     return (
-      <div className={classes["textarea-container"]}>
+      <div className={classes.textAreaContainer}>
+        <i className={classes.icon}>&gt;</i>
         <textarea
           name={name}
           ref={ref}
           onChange={onChange}
           onBlur={onBlur}
-          className={classes["textarea-input"]}
+          className={classes.textAreaInput}
           type="text"
           placeholder={placeholder}
           id="search_input"

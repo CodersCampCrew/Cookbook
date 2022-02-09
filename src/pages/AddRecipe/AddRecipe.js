@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+
 import Label from "../../components/Label/Label";
 import Button from "../../components/Button/Button";
 import TextInput from "../../components/TextInput/TextInput";
@@ -49,7 +50,6 @@ const AddRecipe = () => {
       <div className={classes.formWrapper}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <TextInput
-            className={classes.formItems}
             placeholder="name"
             {...register("name", { required: true })}
           />
@@ -57,7 +57,6 @@ const AddRecipe = () => {
           <div className={classes.formRowItems}>
             <Label labelName="kcal" />
             <TextInput
-              className={classes.formItems}
               placeholder=""
               {...register("kcal", { required: true })}
             />
@@ -67,42 +66,33 @@ const AddRecipe = () => {
           <div className={classes.formRowItems}>
             <Label labelName="time" />
             <TextInput
-              className={classes.formItems}
               placeholder=""
               {...register("time", { required: true })}
             />
             {errors.time?.type === "required" && "time must be in minutes"}
           </div>
           <TextInput
-            className={classes.formItems}
             placeholder="image url"
             {...register("url", { required: true })}
           />
           {errors.url?.type === "required" && "invalid url format (http://...)"}
           <TextArea
-            className={classes.formItems}
             placeholder="short description"
             {...register("shortDescription", { required: true })}
           />
           {errors.shortDescription?.type === "required" &&
             "at least short descripiton is required"}
           <TextInput
-            className={classes.formItems}
             placeholder="tags"
             {...register("tags", { required: true })}
           />
           {errors.tags?.type === "required" && "recipe must be given tags"}
           <TextInput
-            className={classes.formItems}
             placeholder="email"
             {...register("email", { required: true })}
           />
           {errors.email?.type === "required" && "invalid email format"}
-          <Button
-            className={classes.formSubmitItem}
-            submit
-            text="Send Recipe"
-          />
+          <Button submit text="Send Recipe" />
         </form>
       </div>
     </>

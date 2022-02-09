@@ -28,8 +28,8 @@
 }
 
 .formRowItems {
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  gap: 0.5em;
+  grid-template-columns: min-content 1fr;
+  gap: 1em;
 }
