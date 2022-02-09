@@ -56,6 +56,7 @@ const makeServer = () => {
           }
         ]
       });
+
       server.create("dish", {
         id: 3,
         img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tropical-breakfast-bars-31ec8ab.jpg?quality=90&webp=true&resize=300,272",
@@ -79,6 +80,7 @@ const makeServer = () => {
           }
         ]
       });
+
       server.create("dish", {
         id: 4,
         img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spinach-sweet-potato-and-lentil-dhal-be8fae5.jpg?quality=90&webp=true&resize=300,272",
@@ -126,6 +128,7 @@ const makeServer = () => {
           }
         ]
       });
+
       server.create("dish", {
         id: 6,
         img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/roast-chicken-thighs-with-brown-rice-salsa-verde-6d23d73.jpg?quality=90&webp=true&resize=300,272",
@@ -193,6 +196,7 @@ const makeServer = () => {
             }
           ]
         },
+
         server.create("day", {
           day: 2,
           dishes: [
@@ -251,7 +255,12 @@ const makeServer = () => {
       });
 
       this.get("/days", (schema) => {
-        return schema.days.all();
+        return schema.dishes.all();
+      });
+
+      this.post("/dishes", (schema, request) => {
+        const attrs = request.requestBody;
+        return schema.dishes.create(attrs);
       });
     }
   });
