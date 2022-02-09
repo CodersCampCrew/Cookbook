@@ -14,8 +14,12 @@ const GenerateMenuPage = () => {
 
   const navigate = useNavigate();
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = () => navigate('/generated_menu')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+  const onSubmit = () => navigate("/generated_menu");
 
   const addTag = () => {
     if (tagName.length === 0 || tagName.length < 3 || tagName.length > 3) {
@@ -59,17 +63,11 @@ const GenerateMenuPage = () => {
         {errors.time?.type === "required" && "Number of calories is required"}
         <div className={classes.line}>
           <Tag tag="tags" />
-          <TextInput
-            placeholder=""
-            onChange={handleChange}
-          />
+          <TextInput placeholder="" onChange={handleChange} />
           <Button text="ADD" onClick={addTag} className={classes.button} />
         </div>
         <div className={classes.tags}>
-          <TagList
-            tagsArray={tagsArray}
-            handleRemove={handleRemove}
-          />
+          <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
         </div>
         <div className={classes.submit}>
           <Button submit text="Generate" />

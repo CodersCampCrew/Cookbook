@@ -54,7 +54,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Breakfast",
-              tags:["gog","goo"]
+              tags: ["gog", "goo"]
             },
             {
               id: "d2",
@@ -66,7 +66,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Lunch",
-              tags:["non","goo"]
+              tags: ["non", "goo"]
             },
             {
               id: "d3",
@@ -78,7 +78,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Dinner",
-              tags:["src","goo"]
+              tags: ["src", "goo"]
             }
           ]
         },
@@ -95,7 +95,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Breakfast",
-              tags:["gog","yup"]
+              tags: ["gog", "yup"]
             },
             {
               id: "d2",
@@ -107,7 +107,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Lunch",
-              tags:["yum","yup"]
+              tags: ["yum", "yup"]
             },
             {
               id: "d3",
@@ -119,7 +119,7 @@ const makeServer = () => {
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
               dishType: "Dinner",
-              tags:["yum","sup"]
+              tags: ["yum", "sup"]
             }
           ]
         })
