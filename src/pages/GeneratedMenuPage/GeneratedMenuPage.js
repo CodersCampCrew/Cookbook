@@ -23,7 +23,6 @@ const GeneratedMenuPage = () => {
   const handleChange = (e) => {
     setDay(e.target.value);
   };
-
   return (
     dishArray && (
       <>
@@ -31,7 +30,7 @@ const GeneratedMenuPage = () => {
           <DayList onChange={handleChange} />
         </div>
         <ul>
-          {dishArray[day].dishes.map((dish) => (
+          {dishArray.find(dish => dish.day-1===parseInt(day,10)).dishes.map((dish) => (
             <>
               <SubpageTitle
                 className={classes.title}
