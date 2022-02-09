@@ -36,7 +36,7 @@ const AddRecipe = () => {
     handleSubmit,
     formState: { errors }
   } = useForm({ resolver: yupResolver(schema) });
-  console.log(errors);
+
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
@@ -48,12 +48,17 @@ const AddRecipe = () => {
     <>
       <SubpageTitle subpageTitle="Create Recipe" className="subpageTitle" />
       <div className={classes.formWrapper}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <TextInput
-            placeholder="name"
-            {...register("name", { required: true })}
-          />
-          {errors.name?.type === "required" && "recipe name is required"}
+        <form
+          style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div>
+            <TextInput
+              placeholder="name"
+              {...register("name", { required: true })}
+            />
+            {errors.name?.type === "required" && "recipe name is required"}
+          </div>
           <div className={classes.formRowItems}>
             <Label labelName="kcal" />
             <TextInput
@@ -62,7 +67,6 @@ const AddRecipe = () => {
             />
             {errors.kcal?.type === "required" && "kcal must be a number"}
           </div>
-
           <div className={classes.formRowItems}>
             <Label labelName="time" />
             <TextInput
@@ -71,27 +75,36 @@ const AddRecipe = () => {
             />
             {errors.time?.type === "required" && "time must be in minutes"}
           </div>
-          <TextInput
-            placeholder="image url"
-            {...register("url", { required: true })}
-          />
-          {errors.url?.type === "required" && "invalid url format (http://...)"}
-          <TextArea
-            placeholder="short description"
-            {...register("shortDescription", { required: true })}
-          />
-          {errors.shortDescription?.type === "required" &&
-            "at least short descripiton is required"}
-          <TextInput
-            placeholder="tags"
-            {...register("tags", { required: true })}
-          />
-          {errors.tags?.type === "required" && "recipe must be given tags"}
-          <TextInput
-            placeholder="email"
-            {...register("email", { required: true })}
-          />
-          {errors.email?.type === "required" && "invalid email format"}
+          <div>
+            <TextInput
+              placeholder="image url"
+              {...register("url", { required: true })}
+            />
+            {errors.url?.type === "required" &&
+              "invalid url format (http://...)"}
+          </div>
+          <div>
+            <TextArea
+              placeholder="short description"
+              {...register("shortDescription", { required: true })}
+            />
+            {errors.shortDescription?.type === "required" &&
+              "at least short descripiton is required"}
+          </div>
+          <div>
+            <TextInput
+              placeholder="tags"
+              {...register("tags", { required: true })}
+            />
+            {errors.tags?.type === "required" && "recipe must be given tags"}
+          </div>
+          <div>
+            <TextInput
+              placeholder="email"
+              {...register("email", { required: true })}
+            />
+            {errors.email?.type === "required" && "invalid email format"}
+          </div>
           <Button submit text="Send Recipe" />
         </form>
       </div>
