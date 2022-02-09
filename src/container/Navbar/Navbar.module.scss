@@ -4,44 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2D5297;
+  background-color: #2d5297;
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
   height: 60px;
 }
-
-.logoContainer {
-  // padding: 2em;
-  // height: 140px;
-  // display: flex;
-  // justify-content: left;
-  // align-items: center;
-  .name {
-    // font-size: 1.5em;
-    // font-weight: bold;
-    // position: absolute;
-    // left: 0;
-    // padding-left: 10em;
-    // display: flex;
-    // justify-content: left;
-    // align-items: baseline;
-    // margin-left: 1%;
-  }
-}
-
-// .searchContainer {
-//   display: grid;
-//   grid-template-columns: auto auto;
-//   align-items: center;
-//   justify-items: center;
-  
-// }
-
-// .search-icon {
-//   height: 2em;
-//   color: $secondary-color;
-// }
 
 .name {
   font-size: 2rem;
