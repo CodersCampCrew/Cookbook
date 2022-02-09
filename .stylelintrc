@@ -7,6 +7,9 @@
     "value-list-comma-newline-after": null,
     "declaration-empty-line-before": null,
     "color-function-notation": null,
-    "custom-property-empty-line-before": null
+    "custom-property-empty-line-before": null,
+    "no-descending-specificity": null,
+    "selector-descendant-combinator-no-non-space": null,
+    "indentation": null
   }
 }

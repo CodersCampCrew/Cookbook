@@ -5,6 +5,7 @@ import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 
 import classes from "./Navbar.module.scss";
 import Hamburger from "../../assets/menu-symbol-of-three-parallel-lines-svgrepo-com.svg";
+import "./Navbar.scss";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -33,7 +34,6 @@ const Navbar = () => {
         }`}
       >
         <Navigation
-          // activeItemId={location.pathname}
           onSelect={({ itemId }) => {
             if (itemId !== "/recipes") {
               navigate(itemId);
@@ -41,6 +41,11 @@ const Navbar = () => {
             }
           }}
           items={[
+            {
+              title: "Home",
+              elemBefore: () => <span className={classes.dash}>—</span>,
+              itemId: "/"
+            },
             {
               title: "Recipes",
               itemId: "/recipes",

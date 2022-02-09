@@ -1,0 +1,24 @@
+@import "../../colors.scss";
+
+.side-navigation-panel
+  .side-navigation-panel-select
+  .side-navigation-panel-select-wrap
+  .side-navigation-panel-select-option-selected {
+  border-color: $primary-color;
+}
+
+.side-navigation-panel-select-option:hover {
+  border-color: $primary-color !important;
+}
+
+.side-navigation-panel
+  .side-navigation-panel-select
+  .side-navigation-panel-select-inner
+  .side-navigation-panel-select-inner-wrap
+  .side-navigation-panel-select-inner-option-selected {
+  border-color: $primary-color;
+}
+
+.side-navigation-panel-select-inner-option:hover {
+  border-color: $primary-color !important;
+}
