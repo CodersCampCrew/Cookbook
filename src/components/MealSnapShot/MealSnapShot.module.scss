@@ -1,5 +1,13 @@
 @import "../../colors.scss";
 
+.img {
+  object-fit: cover;
+  width: 10em;
+  height: 10em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -10,15 +18,12 @@
   border-radius: 10px;
   padding: 1em;
   max-width: 400px;
+  height: 16.5em;
+  transition: 0.2s;
 
   &:hover {
     cursor: pointer;
-  }
-
-  .img {
-    width: 15em;
-    border-radius: 10px;
-    margin-bottom: 1em;
+    box-shadow: 0 0 10px 5px rgba($color: #000, $alpha: 10%);
   }
 
   .describe {
@@ -61,8 +66,8 @@
 
       .txt {
         margin-left: 1em;
-        color: $primary-color;
         margin-right: 8em;
+        color: $primary-color;
       }
     }
   }
@@ -75,6 +80,23 @@
 
     .img {
       margin-bottom: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+
+    .img {
+      margin-bottom: 0;
+      object-fit: cover;
+      width: 80%;
+    }
+
+    .describe {
+      margin: 3% 0 0;
     }
   }
 }

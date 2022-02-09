@@ -156,15 +156,15 @@ const makeServer = () => {
           day: 1,
           dishes: [
             {
-                id: 1,
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tropical-breakfast-bars-31ec8ab.jpg?quality=90&webp=true&resize=300,272",
-                title: "Tropical breakfast bars",
-                kcal: 230,
-                time: 45,
-                url: "Tropical breakfast bars",
-                desc: "Heat the oven to 180C/160C fan/gas 4. Lightly oil and line a 20cm deep square tin with baking parchment.Mash the bananas in a bowl until smooth, then stir through the oil, egg and sugar. Fold through the muesli, most of the tropical mix and a pinch of salt. Spoon the mixture into the tin and sprinkle with the remaining tropical mix. Bake for 35-40 mins, leave to cool in the tin, then turn out on to a board and slice into 10 bars. Will keep in an airtight container for four days.",
-                shortDesc: "Wrap up these tropical breakfast bars",
-                dishType: "Breakfast",
+              id: 1,
+              img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tropical-breakfast-bars-31ec8ab.jpg?quality=90&webp=true&resize=300,272",
+              title: "Tropical breakfast bars",
+              kcal: 230,
+              time: 45,
+              url: "Tropical breakfast bars",
+              desc: "Heat the oven to 180C/160C fan/gas 4. Lightly oil and line a 20cm deep square tin with baking parchment.Mash the bananas in a bowl until smooth, then stir through the oil, egg and sugar. Fold through the muesli, most of the tropical mix and a pinch of salt. Spoon the mixture into the tin and sprinkle with the remaining tropical mix. Bake for 35-40 mins, leave to cool in the tin, then turn out on to a board and slice into 10 bars. Will keep in an airtight container for four days.",
+              shortDesc: "Wrap up these tropical breakfast bars",
+              dishType: "Breakfast",
               tags: ["gog", "goo"]
             },
             {
