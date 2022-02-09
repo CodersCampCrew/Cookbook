@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
@@ -8,7 +9,7 @@ const BrowserPage = () => {
   const [dishes, setDishes] = useState([]);
 
   const navigate = useNavigate();
-  const params = useParams();
+  const params = useParams()
   useEffect(() => {
     fetch("/api/dishes")
       .then((res) => res.json())
@@ -16,14 +17,11 @@ const BrowserPage = () => {
         setDishes(json.dishes);
       });
   }, []);
-
+  
   return (
     <>
       <div className={classes.centered}>
-        <SubpageTitle
-          className={classes.title}
-          subpageTitle={params.mealTime}
-        />
+        <SubpageTitle className={classes.title} subpageTitle={params.mealTime} />
       </div>
       <ul>
         {dishes.map((dish) => (

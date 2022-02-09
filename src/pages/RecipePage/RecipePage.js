@@ -26,8 +26,6 @@ const RecipePage = () => {
     getSingleRecipe();
   }, []);
 
-  console.log(dish);
-
   return dish ? (
     <div className={classes.wrapper}>
       <SubpageTitle className={classes.title} subpageTitle={dish.title} />
@@ -41,7 +39,7 @@ const RecipePage = () => {
       <div className={classes.recipeDescription}>
         <p>{dish.desc}</p>
       </div>
-      <Comments />
+      <Comments comments={dish.comments} />
     </div>
   ) : null;
 };

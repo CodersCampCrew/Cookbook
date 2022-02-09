@@ -3,9 +3,11 @@ import CommentsItem from "./CommentsItem";
 import classes from "./CommentsList.module.scss";
 
 const CommentsList = ({ comments }) => {
+  console.log(comments);
   return (
     <ul className={classes.commentsList}>
       {comments.map((comment) => (
+    
         <CommentsItem
           key={comment.id}
           id={comment.id}
