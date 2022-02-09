@@ -38,9 +38,10 @@ const GenerateMenuPage = () => {
   };
 
   return (
-    <div className={classes.centered}>
+    <>
       <SubpageTitle className={classes.subpage} subpageTitle="Generate menu" />
-      <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+    <div className={classes.wrapper}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className={classes.line}>
           <Tag tag="kcal" />
           <TextInput
@@ -63,7 +64,7 @@ const GenerateMenuPage = () => {
         {errors.time?.type === "required" && "Number of calories is required"}
         <div className={classes.line}>
           <Tag tag="tags" />
-          <TextInput placeholder="" onChange={handleChange} />
+          <TextInput placeholder="" onChange={handleChange} className={classes.input}/>
           <Button text="ADD" onClick={addTag} className={classes.button} />
         </div>
         <div className={classes.tags}>
@@ -74,6 +75,7 @@ const GenerateMenuPage = () => {
         </div>
       </form>
     </div>
+    </>
   );
 };
 export default GenerateMenuPage;
