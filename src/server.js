@@ -40,7 +40,8 @@ const makeServer = () => {
         time: 45,
         url: "easyeggmuffins",
         desc: "Heat the oven to 200C/180C fan/gas 4. Brush half the oil in an 8-hole muffin tin. Heat the remaining oil in a frying pan and add the broccoli, pepper and spring onions. Fry for 5 mins. Set aside to cool.Whisk the eggs with the milk, smoked paprika and half the cheese in a bowl. Add the cooked veg. Pour the egg mixture into the muffin holes and top each with the remaining cheese and a few chives, if you like. Bake for 15-17 mins or until golden brown and cooked through.",
-        shortDesc: "Make these mini egg muffins for an easy breakfast or lunch with the kids.",
+        shortDesc:
+          "Make these mini egg muffins for an easy breakfast or lunch with the kids.",
         dishType: "Breakfast",
         comments: [
           {

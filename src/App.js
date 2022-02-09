@@ -20,7 +20,7 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path="/create_recipe" element={<AddRecipe />} />
         <Route path="/create_recipe/success" element={<AddedRecipe />} />
-        <Route path="/recipes/:mealTime" element={<BrowserPage  />} />
+        <Route path="/recipes/:mealTime" element={<BrowserPage />} />
         <Route path="/dishes/:dishId" element={<RecipePage />} />
         <Route path="/generate_menu" element={<GenerateMenuPage />} />
         <Route path="/generated_menu" element={<GeneratedMenuPage />} />
