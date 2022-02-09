@@ -12,7 +12,6 @@ const TextArea = forwardRef(
 
     return (
       <div className={classes["textarea-container"]}>
-        <i className={classes.icon}>&gt;</i>
         <textarea
           name={name}
           ref={ref}
@@ -23,6 +22,7 @@ const TextArea = forwardRef(
           placeholder={placeholder}
           id="search_input"
           onKeyDown={(e) => handleKeyDown(e)}
+          row="10"
         />
       </div>
     );

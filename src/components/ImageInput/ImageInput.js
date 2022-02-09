@@ -12,7 +12,7 @@ const ImageInput = forwardRef(
 
     return (
       <label htmlFor="image-input" className={classes["image-label"]}>
-        Add img
+        Add Image
         <input
           className={classes["image-input"]}
           name={name}

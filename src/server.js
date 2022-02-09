@@ -14,7 +14,8 @@ const makeServer = () => {
               title: "Schabowy",
               kcal: 500,
               time: 30,
-              desc: "Great Polish dish"
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish"
             },
             {
               id: 2,
@@ -22,7 +23,8 @@ const makeServer = () => {
               title: "Schabowy",
               kcal: 500,
               time: 30,
-              desc: "Great Polish dish"
+              desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!",
+              shortDesc: "Great Polish dish"
             }
           ],
 

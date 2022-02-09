@@ -1,0 +1,29 @@
+@import "../../colors.scss";
+
+.header {
+  height: 6rem;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: $white-color;
+  border-bottom: 4px solid $primary-color;
+}
+
+.logoSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid $primary-color;
+}

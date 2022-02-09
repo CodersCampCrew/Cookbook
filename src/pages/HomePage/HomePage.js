@@ -1,36 +1,36 @@
-import HomePageDishLabels from "../../components/HomePage/HomePageDishLabels";
-import HomePageDishPhotos from "../../components/HomePage/HomePageDishPhotos";
-import HomePageRecommendedLabel from "../../components/HomePage/HomePageRecommendedLabel";
+import React from "react";
+
+import RecommendedDishImage from "../../assets/pexels-jer-chung.jpg";
 import classes from "./HomePage.module.scss";
+import RecommendedDish from "./RecommendedDish";
+import Dish from "./Dish";
+import BreakfastImage from "../../assets/breakfast.jpg";
+import LunchImage from "../../assets/lunch.jpg";
+import DinnerImage from "../../assets/dinner.jpg";
+import OthersImage from "../../assets/others.jpg";
 
 const HomePage = () => {
-  const photo = "https://picsum.photos/300/300";
   return (
-    <>
-      <div className={classes.recommendedContainer}>
-        <HomePageDishPhotos src="https://picsum.photos/1000/700" />
-        <HomePageRecommendedLabel text="Scrambled Eggs" />
-      </div>
-
+    <div className={classes.pageContainer}>
+      <h1 className={classes.title}>The CookBook</h1>
+      <RecommendedDish
+        src={RecommendedDishImage}
+        alt="Recommended dish"
+        dishName="Scrambled Eggs"
+        dishId="scrambled_eggs"
+      />
       <div className={classes.categoriesContainer}>
-        <div className={classes.dishContainer}>
-          <HomePageDishPhotos src={photo} />
-          <HomePageDishLabels text="Breakfast" />
-        </div>
-        <div className={classes.dishContainer}>
-          <HomePageDishPhotos src={photo} />
-          <HomePageDishLabels text="Lunch" />
-        </div>
-        <div className={classes.dishContainer}>
-          <HomePageDishPhotos src={photo} />
-          <HomePageDishLabels text="Dinner" />
-        </div>
-        <div className={classes.dishContainer}>
-          <HomePageDishPhotos src={photo} />
-          <HomePageDishLabels text="Other" />
-        </div>
+        <Dish
+          src={BreakfastImage}
+          alt="Dish"
+          dishName="Breakfast"
+          path="breakfast"
+        />
+        <Dish src={LunchImage} alt="Dish" dishName="Lunch" path="lunch" />
+        <Dish src={DinnerImage} alt="Dish" dishName="Dinner" path="dinner" />
+        <Dish src={OthersImage} alt="Dish" dishName="Others" path="others" />
       </div>
-    </>
+    </div>
   );
 };
 

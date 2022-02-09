@@ -1,0 +1,103 @@
+@import "../../colors.scss";
+
+.menu {
+  background-color: #2d5297;
+
+  .link {
+    text-decoration: none;
+  }
+
+  .menuItem {
+    font-size: 2rem;
+    padding: 15px;
+    display: flex;
+    color: $white-color;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background-color: black;
+  opacity: 0.5;
+
+  &Hidden {
+    display: none;
+  }
+
+  &Visible {
+    display: block;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  width: 24rem;
+  padding-top: 1rem;
+  overflow-y: auto;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  --transform-translate-x: 0;
+  transform: translateX(var(--transform-translate-x)) translateY(0) rotate(0)
+    skewX(0) skewY(0) scaleX(1) scaleY(1);
+  background-color: #fff;
+  border-left-width: 2px;
+  font-size: 2.5rem;
+
+  &Open {
+    --transform-translate-x: 0;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 100%);
+  }
+
+  &Closed {
+    --transform-translate-x: 100%;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  & nav > ul {
+    padding-bottom: 1rem;
+
+    span {
+      color: $primary-color;
+    }
+
+    > ul {
+      margin-bottom: 1rem;
+
+      li {
+        margin-top: 1rem;
+      }
+
+      span {
+        font-size: 1.7rem !important;
+      }
+    }
+  }
+}
+
+.dash {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbarButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

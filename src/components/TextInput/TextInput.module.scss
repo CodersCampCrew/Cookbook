@@ -1,11 +1,14 @@
+@import "../../colors.scss";
+
 .text-input {
   height: 2em;
   width: 100%;
-  border: 1px solid #707070;
+  border: 1px solid $primary-color;
   border-radius: 2em;
   text-align: center;
   font-family: Hack, monospace;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
 .icon {
@@ -18,8 +21,4 @@
 .textinput-container {
   padding: 10px 0;
   display: flex;
-
-  i {
-    position: absolute;
-  }
 }
