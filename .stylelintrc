@@ -2,6 +2,11 @@
   "extends": "stylelint-config-standard",
   "customSyntax": "postcss-scss",
   "rules": {
-    "selector-class-pattern": "[a-zA-Z]+"
+    "selector-class-pattern": "[a-zA-Z]+",
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": null,
+    "declaration-empty-line-before": null,
+    "color-function-notation": null,
+    "custom-property-empty-line-before": null
   }
 }

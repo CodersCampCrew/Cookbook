@@ -1,0 +1,17 @@
+@import "../../colors.scss";
+
+.header {
+  height: 6rem;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-color;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $white-color;
+  text-decoration: none;
+}

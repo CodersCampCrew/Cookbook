@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import makeServer from "./server";
 
+import makeServer from "./server";
 import Layout from "./Layout";
 import AddRecipe from "./pages/AddRecipe/AddRecipe";
 import AddedRecipe from "./pages/AddedRecipe/AddedRecipe";
@@ -17,12 +17,11 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="/home-page" element={<HomePage />} />
-        <Route path="/addrecipe-page" element={<AddRecipe />} />
-        <Route path="/addedrecipe-page" element={<AddedRecipe />} />
-        <Route path="/browser-page" element={<BrowserPage />} />
-        <Route path="/generatemenu-page" element={<GenerateMenuPage />} />
-        <Route path="/generetedmenu-page" element={<GeneratedMenuPage />} />
+        <Route path="/create_recipe" element={<AddRecipe />} />
+        <Route path="/create_recipe/success" element={<AddedRecipe />} />
+        <Route path="/recipes/*" element={<BrowserPage />} />
+        <Route path="/generate_menu" element={<GenerateMenuPage />} />
+        <Route path="/genereted_menu" element={<GeneratedMenuPage />} />
       </Route>
     </Routes>
   );

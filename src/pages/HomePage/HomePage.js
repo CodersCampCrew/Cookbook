@@ -5,13 +5,13 @@ import classes from "./HomePage.module.scss";
 
 const HomePage = () => {
   const photo = "https://picsum.photos/300/300";
+
   return (
     <>
       <div className={classes.recommendedContainer}>
         <HomePageDishPhotos src="https://picsum.photos/1000/700" />
         <HomePageRecommendedLabel text="Scrambled Eggs" />
       </div>
-
       <div className={classes.categoriesContainer}>
         <div className={classes.dishContainer}>
           <HomePageDishPhotos src={photo} />

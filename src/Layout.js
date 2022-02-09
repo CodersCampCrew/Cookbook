@@ -1,12 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-import Navbar from "./container/Navbar/Navbar";
+import Header from "./container/Header";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <Header />
       <Outlet />
     </>
   );
