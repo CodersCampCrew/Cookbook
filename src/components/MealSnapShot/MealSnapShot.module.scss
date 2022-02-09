@@ -1,21 +1,29 @@
 @import "../../colors.scss";
 
+.img {
+  object-fit: cover;
+  width: 10em;
+  height: 10em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
 .card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: $background-color;
-  margin: 2em auto;
+  margin: 3em auto;
   border: none;
   border-radius: 10px;
-  padding: 1em 2em;
+  padding: 1em;
+  max-width: 400px;
+  height: 16.5em;
+  transition: 0.2s;
 
   &:hover {
     cursor: pointer;
-  }
-
-  .img {
-    width: 80%;
-    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba($color: #000, $alpha: 10%);
   }
 
   .describe {
@@ -33,18 +41,21 @@
       margin-bottom: 0.5em;
       color: $primary-color;
     }
+
     .infoDesc {
-      align-items: start;
       display: flex;
       align-items: center;
       font-size: 1.4rem;
       padding: 0.3em;
       width: 100%;
+
       .txt {
         margin-left: 1em;
+        text-align: left;
         color: $primary-color;
       }
     }
+
     .infoKcal,
     .infoTime {
       display: flex;
@@ -52,11 +63,40 @@
       font-size: 1.4rem;
       padding: 0.3em;
       width: 100%;
+
       .txt {
         margin-left: 1em;
-        color: $primary-color;
         margin-right: 8em;
+        color: $primary-color;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 500px;
+
+    .img {
+      margin-bottom: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+
+    .img {
+      margin-bottom: 0;
+      object-fit: cover;
+      width: 80%;
+    }
+
+    .describe {
+      margin: 3% 0 0;
     }
   }
 }

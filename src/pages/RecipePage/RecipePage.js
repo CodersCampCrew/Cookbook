@@ -39,9 +39,7 @@ const RecipePage = () => {
       <div className={classes.recipeDescription}>
         <p>{dish.desc}</p>
       </div>
-      <div className={classes.comments}>
-        <Comments />
-      </div>
+      <Comments comments={dish.comments} />
     </div>
   ) : null;
 };
