@@ -7,9 +7,9 @@ import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 
 const GeneratedMenuPage = () => {
   const [dishArray, setDishArray] = useState(null);
-  const [day , setDay]=useState(0);
+  const [day, setDay] = useState(0);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/api/days")
@@ -24,32 +24,34 @@ const GeneratedMenuPage = () => {
     setDay(e.target.value);
   };
 
-  return dishArray &&(
-    <>
-      <div className={classes.centered}>
-        <DayList onChange={handleChange} />
-      </div>
-      <ul>
-        {dishArray[day].dishes.map((dish) => (
-          <>
-            <SubpageTitle
-              className={classes.title}
-              subpageTitle={dish.dishType}
-            />
-            <MealSnapShot
-            key={dish.id}
-            id={dish.id}
-            img={dish.img}
-            title={dish.title}
-            kcal={dish.kcal}
-            time={dish.time}
-            shortDesc={dish.shortDesc}
-            onClick={() => navigate(`/dishes/${dish.url}`)}
-            />
-          </>
-        ))}
-      </ul>
-    </>
+  return (
+    dishArray && (
+      <>
+        <div className={classes.centered}>
+          <DayList onChange={handleChange} />
+        </div>
+        <ul>
+          {dishArray[day].dishes.map((dish) => (
+            <>
+              <SubpageTitle
+                className={classes.title}
+                subpageTitle={dish.dishType}
+              />
+              <MealSnapShot
+                key={dish.id}
+                id={dish.id}
+                img={dish.img}
+                title={dish.title}
+                kcal={dish.kcal}
+                time={dish.time}
+                shortDesc={dish.shortDesc}
+                onClick={() => navigate(`/dishes/${dish.url}`)}
+              />
+            </>
+          ))}
+        </ul>
+      </>
+    )
   );
 };
 export default GeneratedMenuPage;

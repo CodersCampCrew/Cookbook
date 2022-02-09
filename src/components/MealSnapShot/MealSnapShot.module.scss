@@ -2,20 +2,23 @@
 
 .card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: $background-color;
-  margin: 2em auto;
+  margin: 3em auto;
   border: none;
   border-radius: 10px;
-  padding: 1em 2em;
+  padding: 1em;
+  max-width: 400px;
 
   &:hover {
     cursor: pointer;
   }
 
   .img {
-    width: 80%;
+    width: 15em;
     border-radius: 10px;
+    margin-bottom: 1em;
   }
 
   .describe {
@@ -23,10 +26,10 @@
     align-items: center;
     flex-direction: column;
     background-color: $white-color;
-    margin: 0 3em;
+    margin: 0 2em;
     border-radius: 20px;
     box-shadow: -1px 2px 20px 0 #0000001a;
-    padding: 1em 3em;
+    padding: 1em;
 
     .mealTitle {
       font-size: 2rem;
@@ -43,11 +46,23 @@
 
       .txt {
         margin-left: 1em;
+        text-align: left;
       }
     }
 
     .infoDesc {
       align-items: start;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 500px;
+
+    .img {
+      margin-bottom: 0;
     }
   }
 }
