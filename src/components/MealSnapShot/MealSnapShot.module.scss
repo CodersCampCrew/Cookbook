@@ -23,31 +23,40 @@
     align-items: center;
     flex-direction: column;
     background-color: $white-color;
-    margin: 0 3em;
+    margin: 0 0.5em 0 3em;
     border-radius: 20px;
     box-shadow: -1px 2px 20px 0 #0000001a;
-    padding: 1em 3em;
+    padding: 1em 5em;
 
     .mealTitle {
       font-size: 2rem;
       margin-bottom: 0.5em;
+      color: $primary-color;
     }
-
-    .infoKcal,
-    .infoTime,
     .infoDesc {
+      align-items: start;
       display: flex;
       align-items: center;
       font-size: 1.4rem;
       padding: 0.3em;
-
+      width: 100%;
       .txt {
         margin-left: 1em;
+        color: $primary-color;
       }
     }
-
-    .infoDesc {
-      align-items: start;
+    .infoKcal,
+    .infoTime {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: 0.3em;
+      width: 100%;
+      .txt {
+        margin-left: 1em;
+        color: $primary-color;
+        margin-right: 8em;
+      }
     }
   }
 }
