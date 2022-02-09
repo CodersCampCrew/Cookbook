@@ -5,13 +5,25 @@
   padding: 0 4rem;
   display: flex;
   justify-content: space-between;
+  background-color: $white-color;
+  border-bottom: 4px solid $primary-color;
+}
+
+.logoSection {
+  height: 100%;
+  display: flex;
   align-items: center;
-  background-color: $secondary-color;
+  gap: 1rem;
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: $white-color;
-  text-decoration: none;
+  height: 4rem;
+  width: 4rem;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid $primary-color;
 }

@@ -7,8 +7,9 @@ import Navbar from "../../components/Navbar";
 const Header = () => {
   return (
     <div className={classes.header}>
-      <NavLink className={classes.logo} to="/">
-        The CookBook
+      <NavLink className={classes.logoSection} to="/">
+        <div className={classes.logo} />
+        <span>The CookBook</span>
       </NavLink>
       <Navbar />
     </div>
