@@ -17,7 +17,8 @@ const MealSnapShot = ({ onClick, img, title, kcal, time, shortDesc }) => {
             <Label labelName="time" /> <p className={classes.txt}> {time} </p>
           </div>
           <div className={classes.infoDesc}>
-            <Label labelName="desc" /> <p className={classes.txt}> {shortDesc} </p>
+            <Label labelName="desc" />{" "}
+            <p className={classes.txt}> {shortDesc} </p>
           </div>
         </div>
       </div>

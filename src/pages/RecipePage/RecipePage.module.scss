@@ -17,7 +17,6 @@
   .recipeImg {
     margin-top: 2em;
     width: 50%;
-    
   }
 
   .recipeBagdes {
@@ -27,27 +26,26 @@
     width: 35%;
     margin: 2em 0;
 
-    .bagde{
-       font-size: 1.2rem;
-       color: $secondary-color;
+    .bagde {
+      font-size: 1.2rem;
+      color: $secondary-color;
     }
   }
 
-  .recipeDescription{
-      width: 90%;
+  .recipeDescription {
+    width: 90%;
 
-      p{
-          font-size: 1.7rem;
-          text-align: justify;
-      }
+    p {
+      font-size: 1.7rem;
+      text-align: justify;
+    }
   }
 }
 
-
-@media (min-width: 768px){
-    .wrapper{
-        .recipeImg{
-            width: 600px;
-        }
+@media (min-width: 768px) {
+  .wrapper {
+    .recipeImg {
+      width: 600px;
     }
+  }
 }
