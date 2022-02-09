@@ -18,10 +18,11 @@
 
 .tags {
   display: flex;
+  max-width: 33%;
   border: 1px solid red;
   flex-wrap: wrap;
   align-content: space-between;
-  gap: 10px;
+  gap: 15px;
 }
 
 .button {
