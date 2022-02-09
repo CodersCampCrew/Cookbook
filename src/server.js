@@ -53,7 +53,8 @@ const makeServer = () => {
               time: 5,
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Breakfast"
+              dishType: "Breakfast",
+              tags:["gog","goo"]
             },
             {
               id: "d2",
@@ -64,7 +65,8 @@ const makeServer = () => {
               time: 5,
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Lunch"
+              dishType: "Lunch",
+              tags:["non","goo"]
             },
             {
               id: "d3",
@@ -75,12 +77,12 @@ const makeServer = () => {
               url: "ramen",
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Dinner"
+              dishType: "Dinner",
+              tags:["src","goo"]
             }
           ]
         },
-        server.create("day",
-        {
+        server.create("day", {
           day: 2,
           dishes: [
             {
@@ -92,7 +94,8 @@ const makeServer = () => {
               time: 5,
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Breakfast"
+              dishType: "Breakfast",
+              tags:["gog","yup"]
             },
             {
               id: "d2",
@@ -103,7 +106,8 @@ const makeServer = () => {
               time: 5,
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Lunch"
+              dishType: "Lunch",
+              tags:["yum","yup"]
             },
             {
               id: "d3",
@@ -114,7 +118,8 @@ const makeServer = () => {
               time: 5,
               desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
               shortDesc: "Great Polish dish",
-              dishType: "Dinner"
+              dishType: "Dinner",
+              tags:["yum","sup"]
             }
           ]
         })
