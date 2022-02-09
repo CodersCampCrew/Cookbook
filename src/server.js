@@ -53,7 +53,6 @@ const makeServer = () => {
           }
         ]
       });
-
       server.create(
         "day",
         {
@@ -154,7 +153,12 @@ const makeServer = () => {
       });
 
       this.get("/days", (schema) => {
-        return schema.days.all();
+        return schema.dishes.all();
+      });
+
+      this.post("/dishes", (schema, request) => {
+        const attrs = request.requestBody;
+        return schema.dishes.create(attrs);
       });
     }
   });

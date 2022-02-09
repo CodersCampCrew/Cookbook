@@ -1,11 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-// import propTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 import Label from "../../components/Label/Label";
 import Button from "../../components/Button/Button";
 import TextInput from "../../components/TextInput/TextInput";
 import TextArea from "../../components/TextArea/TextArea";
-import ImageInput from "../../components/ImageInput/ImageInput";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import classes from "./AddRecipe.module.scss";
 
@@ -16,8 +15,11 @@ const AddRecipe = () => {
     formState: { errors }
   } = useForm();
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
-    console.log(data);
+    fetch("/api/dishes", { method: "POST", body: data });
+    navigate(`/create_recipe/success`);
   };
 
   return (
@@ -47,16 +49,16 @@ const AddRecipe = () => {
               {...register("time", { required: true })}
             />
           </div>
-          <ImageInput
+          <TextInput
             className={classes.formItems}
-            placeholder=""
-            {...register("time", { required: true })}
+            placeholder="image url"
+            {...register("url", { required: true })}
           />
           {/* Textarea!! */}
           <TextArea
             className={classes.formItems}
             placeholder="short description"
-            {...register("short description", { required: true })}
+            {...register("shortDescription", { required: true })}
           />
           <TextInput
             className={classes.formItems}

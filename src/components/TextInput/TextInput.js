@@ -12,6 +12,7 @@ const TextInput = forwardRef(
 
     return (
       <div className={classes["textinput-container"]}>
+        <i className={classes.icon}>&gt;</i>
         <input
           name={name}
           ref={ref}
