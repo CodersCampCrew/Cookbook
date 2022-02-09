@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 import classes from "./TagList.module.scss";
 
-const TagList = ({ tagsArray, handleRemove , className }) => {
+const TagList = ({ tagsArray, handleRemove, className }) => {
   return (
     <>
       {tagsArray.map((tag) => (
@@ -25,9 +25,9 @@ export default TagList;
 TagList.propTypes = {
   tagsArray: propTypes.arrayOf(propTypes.string).isRequired,
   handleRemove: propTypes.func.isRequired,
-  className: propTypes.string,
+  className: propTypes.string
 };
 
 TagList.defaultProps = {
-  className: "",
+  className: ""
 };

@@ -46,5 +46,4 @@ const RecipePage = () => {
   ) : null;
 };
 
-
 export default RecipePage;

@@ -40,41 +40,45 @@ const GenerateMenuPage = () => {
   return (
     <>
       <SubpageTitle className={classes.subpage} subpageTitle="Generate menu" />
-    <div className={classes.wrapper}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className={classes.line}>
-          <Tag tag="kcal" />
-          <TextInput
-            placeholder=""
-            register={register}
-            regName="kcal"
-            {...register("kcal", { required: true })}
-          />
-        </div>
-        {errors.kcal?.type === "required" && "Number of calories is required"}
-        <div className={classes.line}>
-          <Tag tag="time" />
-          <TextInput
-            placeholder=""
-            register={register}
-            regName="time"
-            {...register("time", { required: true })}
-          />
-        </div>
-        {errors.time?.type === "required" && "Number of calories is required"}
-        <div className={classes.line}>
-          <Tag tag="tags" />
-          <TextInput placeholder="" onChange={handleChange} className={classes.input}/>
-          <Button text="ADD" onClick={addTag} className={classes.button} />
-        </div>
-        <div className={classes.tags}>
-          <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
-        </div>
-        <div className={classes.submit}>
-          <Button submit text="Generate" />
-        </div>
-      </form>
-    </div>
+      <div className={classes.wrapper}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className={classes.line}>
+            <Tag tag="kcal" />
+            <TextInput
+              placeholder=""
+              register={register}
+              regName="kcal"
+              {...register("kcal", { required: true })}
+            />
+          </div>
+          {errors.kcal?.type === "required" && "Number of calories is required"}
+          <div className={classes.line}>
+            <Tag tag="time" />
+            <TextInput
+              placeholder=""
+              register={register}
+              regName="time"
+              {...register("time", { required: true })}
+            />
+          </div>
+          {errors.time?.type === "required" && "Number of calories is required"}
+          <div className={classes.line}>
+            <Tag tag="tags" />
+            <TextInput
+              placeholder=""
+              onChange={handleChange}
+              className={classes.input}
+            />
+            <Button text="ADD" onClick={addTag} className={classes.button} />
+          </div>
+          <div className={classes.tags}>
+            <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
+          </div>
+          <div className={classes.submit}>
+            <Button submit text="Generate" />
+          </div>
+        </form>
+      </div>
     </>
   );
 };
