@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Comments from "../../components/Comments/Comments";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
+import RecipePage from "../RecipePage/RecipePage";
 import classes from "./BrowserPage.module.scss";
 
 const BrowserPage = ({ mealTime }) => {
@@ -15,6 +16,8 @@ const BrowserPage = ({ mealTime }) => {
         setDishes(json.dishes);
       });
   }, []);
+
+
   return (
     <>
       <div className={classes.centered}>
@@ -29,11 +32,23 @@ const BrowserPage = ({ mealTime }) => {
             title={dish.title}
             kcal={dish.kcal}
             time={dish.time}
-            desc={dish.desc}
+            shortDesc={dish.shortDesc}
+          
           />
         ))}
       </ul>
       <Comments />
+
+      {dishes.map((dish) => (
+        <RecipePage
+        key={dish.id}
+        recipeTitle={dish.title}
+        recipeImg={dish.img}
+        recipeKcal={dish.kcal}
+        recipeTime={dish.time}
+        recipeDesc={dish.desc}
+        />
+      ))}
     </>
   );
 };

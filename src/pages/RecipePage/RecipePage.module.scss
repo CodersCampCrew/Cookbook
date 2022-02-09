@@ -1,0 +1,53 @@
+@import "../../colors.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .title {
+    color: $secondary-color;
+    font-size: 3rem;
+  }
+
+  .recipeImg {
+    margin-top: 2em;
+    width: 50%;
+    
+  }
+
+  .recipeBagdes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    margin: 2em 0;
+
+    .bagde{
+       font-size: 1.2rem;
+       color: $secondary-color;
+    }
+  }
+
+  .recipeDescription{
+      width: 90%;
+
+      p{
+          font-size: 1.7rem;
+          text-align: justify;
+      }
+  }
+}
+
+
+@media (min-width: 768px){
+    .wrapper{
+        .recipeImg{
+            width: 600px;
+        }
+    }
+}
