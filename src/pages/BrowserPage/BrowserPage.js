@@ -17,7 +17,7 @@ const BrowserPage = ({ mealTime }) => {
         setDishes(json.dishes);
       });
   }, []);
-
+  console.log(dishes);
   return (
     <>
       <div className={classes.centered}>

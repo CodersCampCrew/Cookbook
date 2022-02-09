@@ -4,7 +4,6 @@ const makeServer = () => {
   createServer({
     models: {
       dish: Model,
-      comment: Model,
       day: Model
     },
 
@@ -17,8 +16,21 @@ const makeServer = () => {
         time: 30,
         url: "schabowy",
         desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
-        shortDesc: "Great Polish dish"
+        shortDesc: "Great Polish dish",
+        comments: [
+          {
+            id: 1,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Marcin"
+          },
+          {
+            id: 2,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Przemek"
+          }
+        ]
       });
+
       server.create("dish", {
         id: 2,
         img: "https://picsum.photos/100/100",
@@ -27,18 +39,21 @@ const makeServer = () => {
         time: 30,
         url: "frytki",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!",
-        shortDesc: "Great Polish dish"
+        shortDesc: "Great Polish dish",
+        comments: [
+          {
+            id: 1,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Marcin"
+          },
+          {
+            id: 2,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Przemek"
+          }
+        ]
       });
-      server.create("comment", {
-        id: 1,
-        text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
-        author: "Marcin"
-      });
-      server.create("comment", {
-        id: 2,
-        text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
-        author: "Przemek"
-      });
+
       server.create(
         "day",
         {
@@ -130,12 +145,14 @@ const makeServer = () => {
       this.namespace = "api";
 
       this.get("/dishes", (schema) => {
-        return { dishes: schema.dishes.all(), comments: schema.comments.all() };
+        return schema.dishes.all();
       });
+
       this.get("dishes/:url", (schema, request) => {
         const { url } = request.params;
         return schema.dishes.findBy({ url });
       });
+
       this.get("/days", (schema) => {
         return schema.days.all();
       });
