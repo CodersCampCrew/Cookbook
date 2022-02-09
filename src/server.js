@@ -1,46 +1,160 @@
-import { createServer } from "miragejs";
+import { createServer, Model } from "miragejs";
 
 const makeServer = () => {
   createServer({
+    models: {
+      dish: Model,
+      day: Model
+    },
+
+    seeds(server) {
+      server.create("dish", {
+        id: 1,
+        img: "https://picsum.photos/100/100",
+        title: "Schabowy",
+        kcal: 500,
+        time: 30,
+        url: "schabowy",
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+        shortDesc: "Great Polish dish",
+        comments: [
+          {
+            id: 1,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Marcin"
+          },
+          {
+            id: 2,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Przemek"
+          }
+        ]
+      });
+
+      server.create("dish", {
+        id: 2,
+        img: "https://picsum.photos/100/100",
+        title: "Frytki",
+        kcal: 500,
+        time: 30,
+        url: "frytki",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!",
+        shortDesc: "Great Polish dish",
+        comments: [
+          {
+            id: 1,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Marcin"
+          },
+          {
+            id: 2,
+            text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
+            author: "Przemek"
+          }
+        ]
+      });
+
+      server.create(
+        "day",
+        {
+          day: 1,
+          dishes: [
+            {
+              id: "d1",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "scrambled eggs",
+              kcal: 500,
+              url: "scrambled_eggs",
+              time: 5,
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Breakfast",
+              tags: ["gog", "goo"]
+            },
+            {
+              id: "d2",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "schabowy",
+              kcal: 500,
+              url: "schabowy",
+              time: 5,
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Lunch",
+              tags: ["non", "goo"]
+            },
+            {
+              id: "d3",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "Ramen",
+              kcal: 500,
+              time: 5,
+              url: "ramen",
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Dinner",
+              tags: ["src", "goo"]
+            }
+          ]
+        },
+        server.create("day", {
+          day: 2,
+          dishes: [
+            {
+              id: "d1",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "Ramen",
+              kcal: 500,
+              url: "ramen",
+              time: 5,
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Breakfast",
+              tags: ["gog", "yup"]
+            },
+            {
+              id: "d2",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "Jajko na twardo",
+              kcal: 500,
+              url: "jajko_na_twardo",
+              time: 5,
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Lunch",
+              tags: ["yum", "yup"]
+            },
+            {
+              id: "d3",
+              img: "https://i.picsum.photos/id/884/100/100.jpg?hmac=HMwxDNALxMBZgAa1RBpR_sK2iwXb4d7PpowbCgRIrGM",
+              title: "Kurczak",
+              kcal: 500,
+              url: "kurczak",
+              time: 5,
+              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
+              shortDesc: "Great Polish dish",
+              dishType: "Dinner",
+              tags: ["yum", "sup"]
+            }
+          ]
+        })
+      );
+    },
+
     routes() {
       this.namespace = "api";
 
-      this.get("/dishes", () => {
-        return {
-          dishes: [
-            {
-              id: 1,
-              img: "https://picsum.photos/100/100",
-              title: "Schabowy",
-              kcal: 500,
-              time: 30,
-              desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, hic.",
-              shortDesc: "Great Polish dish"
-            },
-            {
-              id: 2,
-              img: "https://picsum.photos/100/100",
-              title: "Schabowy",
-              kcal: 500,
-              time: 30,
-              desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio iusto maiores inventore sed velit!",
-              shortDesc: "Great Polish dish"
-            }
-          ],
+      this.get("/dishes", (schema) => {
+        return schema.dishes.all();
+      });
 
-          comments: [
-            {
-              id: 1,
-              text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
-              author: "Marcin"
-            },
-            {
-              id: 2,
-              text: "Very tasty Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, iure possimus quam qui, ratione earum aut hic repudiandae soluta dolorum debitis dolore quis fuga non dolores quibusdam quaerat expedita eaque?",
-              author: "Przemek"
-            }
-          ]
-        };
+      this.get("dishes/:url", (schema, request) => {
+        const { url } = request.params;
+        return schema.dishes.findBy({ url });
+      });
+
+      this.get("/days", (schema) => {
+        return schema.days.all();
       });
     }
   });
