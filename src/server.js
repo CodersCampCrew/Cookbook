@@ -48,8 +48,7 @@ const makeServer = () => {
       });
       this.get("dishes/:url", (schema, request) => {
         const { url } = request.params;
-        console.log(url);
-        return schema.dishes.find(url);
+        return schema.dishes.findBy({url});
       });
     }
   });

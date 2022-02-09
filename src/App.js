@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/create_recipe" element={<AddRecipe />} />
         <Route path="/create_recipe/success" element={<AddedRecipe />} />
         <Route path="/recipes/*" element={<BrowserPage />} />
-        <Route path='/dishes/:dishId' element={<RecipePage/>}  />
+        <Route path="/dishes/:dishId" element={<RecipePage />} />
         <Route path="/generate_menu" element={<GenerateMenuPage />} />
         <Route path="/genereted_menu" element={<GeneratedMenuPage />} />
       </Route>

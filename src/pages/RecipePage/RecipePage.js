@@ -26,20 +26,19 @@ const RecipePage = ({
 
       const loadedRecipe = {
         id: dishId,
-        ...data
+        ...data.dish
       };
 
-       setDish(loadedRecipe)
+      setDish(loadedRecipe);
     };
     getSingleRecipe();
-    
   }, []);
 
   console.log(dish);
 
-  return (
+  return dish ? (
     <div className={classes.wrapper}>
-      <SubpageTitle className={classes.title} subpageTitle={recipeTitle} />
+      <SubpageTitle className={classes.title} subpageTitle={dish.title} />
 
       <img className={classes.recipeImg} src={recipeImg} alt={recipeTitle} />
 
@@ -52,7 +51,7 @@ const RecipePage = ({
       </div>
       <Comments />
     </div>
-  );
+  ) : null;
 };
 
 RecipePage.propTypes = {

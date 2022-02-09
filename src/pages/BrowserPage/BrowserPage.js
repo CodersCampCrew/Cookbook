@@ -7,7 +7,7 @@ import classes from "./BrowserPage.module.scss";
 
 const BrowserPage = ({ mealTime }) => {
   const [dishes, setDishes] = useState([]);
- 
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,8 +17,6 @@ const BrowserPage = ({ mealTime }) => {
         setDishes(json.dishes);
       });
   }, []);
-
-  
 
   return (
     <>
@@ -35,11 +33,7 @@ const BrowserPage = ({ mealTime }) => {
             kcal={dish.kcal}
             time={dish.time}
             shortDesc={dish.shortDesc}
-            onClick={() =>
-              navigate(
-                `/dishes/${dish.url}`
-              )
-            }
+            onClick={() => navigate(`/dishes/${dish.url}`)}
           />
         ))}
       </ul>
