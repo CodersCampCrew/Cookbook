@@ -7,7 +7,6 @@ const CommentsList = ({ comments }) => {
   return (
     <ul className={classes.commentsList}>
       {comments.map((comment) => (
-    
         <CommentsItem
           key={comment.id}
           id={comment.id}
