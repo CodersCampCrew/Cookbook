@@ -64,18 +64,20 @@ const GenerateMenuPage = () => {
           {errors.time?.type === "required" && "Number of calories is required"}
           <div className={classes.line}>
             <Tag tag="tags" />
-            <TextInput
-              placeholder=""
-              onChange={handleChange}
-              className={classes.input}
-            />
+            <span className={classes.taginput}>
+              <TextInput
+                placeholder=""
+                onChange={handleChange}
+                className={classes.tagInput}
+              />
+            </span>
             <Button text="ADD" onClick={addTag} className={classes.button} />
           </div>
           <div className={classes.tags}>
             <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
           </div>
           <div className={classes.submit}>
-            <Button submit text="Generate" />
+            <Button submit text="Generate" className={classes.submitbutton} />
           </div>
         </form>
       </div>
