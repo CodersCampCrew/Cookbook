@@ -4,9 +4,11 @@ import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import IconToSort from "../../components/IconToSort/IconToSort";
 import classes from "./BrowserPage.module.scss";
+import Modal from "../../components/Modal/Modal";
 
 const BrowserPage = () => {
   const [dishes, setDishes] = useState([]);
+  const [modal, setModal] = useState(0);
 
   const navigate = useNavigate();
   const params = useParams();
@@ -20,7 +22,13 @@ const BrowserPage = () => {
 
   return (
     <>
-      <div className={classes.title}><SubpageTitle className={classes.subpageTitle} subpageTitle={params.mealTime} /><IconToSort /></div>
+      <div className={classes.title}>
+        <SubpageTitle
+          className={classes.subpageAllTitle}
+          subpageTitle={params.mealTime}
+        />
+        <IconToSort modal={modal} setModal={setModal} />
+      </div>
       <ul>
         {dishes.map((dish) => (
           <MealSnapShot
@@ -35,6 +43,7 @@ const BrowserPage = () => {
           />
         ))}
       </ul>
+      {modal && <Modal setModal={setModal} />}
     </>
   );
 };

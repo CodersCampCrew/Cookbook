@@ -5,22 +5,22 @@
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-bottom: 1px solid $primary-color;
-  width: 90%;
-
-  .subpageTitle {
-  margin: 0 auto;
-  padding: 0.5em;
-  background: none;
-  border: none;
-  font-size: 3rem;
-  font-weight: bold;
+  margin: 0 2em;
   display: flex;
-  
-  color: $primary-color;
-  text-transform: capitalize;
+  justify-content:center;
+  gap: 0.6em;
+   
+  .subpageAllTitle {
+    margin: 0;
+    padding: 0.5em 0;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    color: $primary-color;
+    text-transform: capitalize;
+    width: auto;
   }
 }

@@ -9,15 +9,31 @@ const Backdrop = () => {
 
 const Modal = ({ className, setModal }) => {
   return (
-    <>
+    <div onClick={() => setModal(false)}>
       <Backdrop />
       <div className={className}>
-        <Button className={classes.button} text="kcal: lower to higher" onClikck={()=>setModal(false)} />
-        <Button className={classes.button} text="kcal: higher to lower" onClikck={()=>setModal(false)} />
-        <Button className={classes.button} text="time: lower to higher" onClikck={()=>setModal(false)} />
-        <Button className={classes.button} text="time: higher to lower" onClikck={()=>setModal(false)} />
+        <Button
+          className={classes.button}
+          text="kcal: lower to higher"
+          onClick={() => setModal(false)}
+        />
+        <Button
+          className={classes.button}
+          text="kcal: higher to lower"
+          onClick={() => setModal(false)}
+        />
+        <Button
+          className={classes.button}
+          text="time: lower to higher"
+          onClick={() => setModal(false)}
+        />
+        <Button
+          className={classes.button}
+          text="time: higher to lower"
+          onClick={() => setModal(false)}
+        />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -31,3 +47,4 @@ Modal.defaultProps = {
 };
 
 export default Modal;
+
