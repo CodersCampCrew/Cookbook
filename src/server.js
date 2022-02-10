@@ -255,7 +255,7 @@ const makeServer = () => {
       });
 
       this.get("/days", (schema) => {
-        return schema.dishes.all();
+        return schema.days.all();
       });
 
       this.post("/dishes", (schema, request) => {
