@@ -9,7 +9,7 @@ const RecommendedDish = ({ src, alt, dishName, dishId }) => {
 
   return (
     <div
-      onClick={() => navigate(`/recipe/${dishId}`)}
+      onClick={() => navigate(`/dishes/${dishId}`)}
       className={classes.recommendedContainer}
     >
       <img src={src} alt={alt} />

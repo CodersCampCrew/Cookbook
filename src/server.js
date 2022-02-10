@@ -249,18 +249,31 @@ const makeServer = () => {
         return schema.dishes.all();
       });
 
-      this.get("dishes/:url", (schema, request) => {
+      this.get("/dishes/:url", (schema, request) => {
         const { url } = request.params;
         return schema.dishes.findBy({ url });
+      });
+
+      this.post("/dishes", (schema, request) => {
+        const attrs = request.requestBody;
+        return schema.dishes.create(attrs);
       });
 
       this.get("/days", (schema) => {
         return schema.days.all();
       });
 
-      this.post("/dishes", (schema, request) => {
-        const attrs = request.requestBody;
-        return schema.dishes.create(attrs);
+      this.get("/recommended", (schema) => {
+        const dishes = schema.dishes.all();
+        return dishes.models[Math.floor(Math.random() * dishes.length)];
+      });
+
+      this.post("/comments", (schema, request) => {
+        const { dishId, text, author } = request.requestBody;
+        const dish = schema.dishes.findBy({ id: dishId });
+        dish.update("comments", [...dish.comments, { text, author }]);
+
+        return dish;
       });
     }
   });

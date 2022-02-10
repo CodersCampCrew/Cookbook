@@ -5,14 +5,25 @@ import NewCommentForm from "./NewCommentForm";
 import Button from "../Button/Button";
 import classes from "./Comments.module.scss";
 
-const Comments = ({ comments }) => {
+const Comments = ({ comments, dishId }) => {
   const [isAddingComment, setIsAddingComment] = useState(false);
+  const [localComments, setLocalComments] = useState(comments);
 
   const startAddCommentHandler = () => {
     setIsAddingComment(true);
   };
 
-  const addComment = () => {};
+  const addComment = (enteredTextComment, enteredTextAuthor) => {
+    fetch(`/api/comments`, {
+      method: "POST",
+      body: { dishId, text: enteredTextComment, author: enteredTextAuthor }
+    });
+
+    setLocalComments((prevComments) => [
+      ...prevComments,
+      { id: Math.random(), text: enteredTextComment, author: enteredTextAuthor }
+    ]);
+  };
 
   return (
     <section className={classes.comments}>
@@ -25,13 +36,14 @@ const Comments = ({ comments }) => {
         />
       )}
       {isAddingComment && <NewCommentForm addComment={addComment} />}
-      <CommentsList comments={comments} />
+      <CommentsList comments={localComments} />
     </section>
   );
 };
 
 Comments.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.shape({})).isRequired
+  comments: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  dishId: PropTypes.string.isRequired
 };
 
 export default Comments;
