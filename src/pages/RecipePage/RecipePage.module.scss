@@ -9,14 +9,11 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  .title {
-    color: $secondary-color;
-    font-size: 3rem;
-  }
-
   .recipeImg {
-    margin-top: 2em;
-    width: 50%;
+    margin-top: 1%;
+    width: 85%;
+    height: 40rem;
+    object-fit: cover;
   }
 
   .recipeBagdes {
@@ -28,7 +25,7 @@
 
     .bagde {
       font-size: 1.2rem;
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
 
@@ -37,15 +34,13 @@
 
     p {
       font-size: 1.7rem;
+      line-height: 1.6;
       text-align: justify;
     }
   }
-}
 
-@media (min-width: 768px) {
-  .wrapper {
-    .recipeImg {
-      width: 600px;
-    }
+  .comments {
+    margin-bottom: 5%;
+    color: $primary-color;
   }
 }

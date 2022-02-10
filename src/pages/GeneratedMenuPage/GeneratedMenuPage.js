@@ -18,11 +18,11 @@ const GeneratedMenuPage = () => {
         setDishArray(json.days);
       });
   }, []);
-  console.log(dishArray);
 
   const handleChange = (e) => {
     setDay(e.target.value);
   };
+
   return (
     dishArray && (
       <>

@@ -11,13 +11,14 @@ const TextInput = forwardRef(
     };
 
     return (
-      <div className={classes["textinput-container"]}>
+      <div className={classes.textInputContainer}>
+        <i className={classes.icon}>&gt;</i>
         <input
           name={name}
           ref={ref}
           onChange={onChange}
           onBlur={onBlur}
-          className={classes["text-input"]}
+          className={classes.textInput}
           type="text"
           placeholder={placeholder}
           id="search_input"

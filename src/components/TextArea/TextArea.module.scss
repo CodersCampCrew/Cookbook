@@ -1,24 +1,18 @@
 @import "../../colors.scss";
 
-.textarea-input {
+.textAreaInput {
   width: 100%;
-  padding: 5px 0;
+  height: 15rem;
+  padding: 1rem 1rem 1rem 3rem;
   border: 1px solid $primary-color;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: normal;
-  resize: none;
+  border-radius: 1rem;
+  text-align: left;
+  font-family: Hack, monospace;
+  font-size: 1rem;
+  resize: vertical;
 }
 
 .icon {
-  padding: 10px;
-  padding-left: 0;
-  min-width: 50px;
-  text-align: center;
-}
-
-.textarea-container {
-  padding: 10px 0;
-  display: flex;
-  align-items: baseline;
+  position: absolute;
+  margin: 1.2rem 0 0 1.5rem;
 }
