@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import Tag from "../../components/Tag/Tag";
+
+import Label from "../../components/Label/Label";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import TextInput from "../../components/TextInput/TextInput";
 import classes from "./GenerateMenuPage.module.scss";
@@ -41,50 +42,45 @@ const GenerateMenuPage = () => {
   };
 
   return (
-    <>
+    <div className={classes.pageWrapper}>
       <SubpageTitle subpageTitle="Generate menu" />
-      <div className={classes.wrapper}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={classes.line}>
-            <Tag tag="kcal" />
+      <div className={classes.formWrapper}>
+        <form
+          style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className={classes.formRowItems}>
+            <Label labelName="kcal" />
             <TextInput
               placeholder=""
-              register={register}
-              regName="kcal"
               {...register("kcal", { required: true })}
             />
           </div>
           {errors.kcal?.type === "required" && "Number of calories is required"}
-          <div className={classes.line}>
-            <Tag tag="time" />
+          <div className={classes.formRowItems}>
+            <Label labelName="time" />
             <TextInput
               placeholder=""
-              register={register}
-              regName="time"
               {...register("time", { required: true })}
             />
           </div>
           {errors.time?.type === "required" && "Number of calories is required"}
-          <div className={classes.line}>
-            <Tag tag="tags" />
-            <span className={classes.taginput}>
-              <TextInput
-                placeholder=""
-                onChange={handleChange}
-                className={classes.tagInput}
-              />
-            </span>
+          <div
+            className={`${classes.formRowItems} ${classes.formRowItemsLarge}`}
+          >
+            <Label labelName="tags" />
+            <TextInput placeholder="" onChange={handleChange} />
             <Button text="ADD" onClick={addTag} className={classes.button} />
           </div>
           <div className={classes.tags}>
             <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
           </div>
           <div className={classes.submit}>
-            <Button submit text="Generate" className={classes.submitbutton} />
+            <Button submit text="Generate" />
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
