@@ -38,7 +38,7 @@ const AddRecipe = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const navigate = useNavigate();
-  console.log(errors);
+
   const onSubmit = (data) => {
     fetch("/api/dishes", { method: "POST", body: data });
     navigate(`/create_recipe/success`);
