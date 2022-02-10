@@ -38,7 +38,7 @@ const AddRecipe = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const navigate = useNavigate();
-
+  console.log(errors);
   const onSubmit = (data) => {
     fetch("/api/dishes", { method: "POST", body: data });
     navigate(`/create_recipe/success`);
@@ -65,7 +65,9 @@ const AddRecipe = () => {
               placeholder=""
               {...register("kcal", { required: true })}
             />
-            {errors.kcal?.type === "required" && "kcal must be a number"}
+            <span style={{ gridColumn: "span 2" }}>
+              {errors.kcal?.type === "typeError" && "kcal must be a number"}
+            </span>
           </div>
           <div className={classes.formRowItems}>
             <Label labelName="time" />
@@ -73,14 +75,16 @@ const AddRecipe = () => {
               placeholder=""
               {...register("time", { required: true })}
             />
-            {errors.time?.type === "required" && "time must be in minutes"}
+            <span style={{ gridColumn: "span 2" }}>
+              {errors.time?.type === "typeError" && "time must be in minutes"}
+            </span>
           </div>
           <div>
             <TextInput
               placeholder="image url"
               {...register("url", { required: true })}
             />
-            {errors.url?.type === "required" &&
+            {errors.url?.type === "matches" &&
               "invalid url format (http://...)"}
           </div>
           <div>
