@@ -1,8 +1,9 @@
+@import "../../colors.scss";
 .selectday {
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  color: #aeaeae;
+  color: $primary-color;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -10,7 +11,7 @@
 .dayTitle {
   padding: 0.3em 0.75em;
   background: none;
-  border-bottom: 1px solid #aeaeae;
+  border-bottom: 1px solid $primary-color;
   display: flex;
   justify-content: center;
 }
