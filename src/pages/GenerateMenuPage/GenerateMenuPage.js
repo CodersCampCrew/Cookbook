@@ -64,7 +64,7 @@ const GenerateMenuPage = () => {
               {...register("time", { required: true })}
             />
           </div>
-          {errors.time?.type === "required" && "Number of calories is required"}
+          {errors.time?.type === "required" && "Time is required"}
           <div
             className={`${classes.formRowItems} ${classes.formRowItemsLarge}`}
           >
