@@ -8,6 +8,7 @@
 }
 
 .line {
+  padding: 0.5em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +31,7 @@
   font-size: 1em;
 }
 .taginput {
-  width: 8em;
+  width: 11.5em;
 }
 
 .subpage {
@@ -43,6 +44,6 @@
   max-width: 20em;
 }
 .submitbutton {
-  width: 13em;
+  width: 16em;
   border: 2px solid $primary-color;
 }
