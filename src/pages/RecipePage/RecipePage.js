@@ -34,7 +34,7 @@ const RecipePage = () => {
 
       <div className={classes.recipeBagdes}>
         <Label className={classes.bagde} labelName={`kcal ${dish.kcal}`} />
-        <Label className={classes.bagde} labelName={`time ${dish.time}`} />
+        <Label className={classes.bagde} labelName={`time ${dish.time}min`} />
       </div>
       <div className={classes.recipeDescription}>
         <p>{dish.desc}</p>
