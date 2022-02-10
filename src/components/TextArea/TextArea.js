@@ -11,7 +11,7 @@ const TextArea = forwardRef(
     };
 
     return (
-      <div className={classes.textAreaContainer}>
+      <div>
         <i className={classes.icon}>&gt;</i>
         <textarea
           name={name}

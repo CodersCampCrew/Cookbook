@@ -28,7 +28,7 @@ const RecipePage = () => {
 
   return dish ? (
     <div className={classes.wrapper}>
-      <SubpageTitle className={classes.title} subpageTitle={dish.title} />
+      <SubpageTitle subpageTitle={dish.title} />
 
       <img className={classes.recipeImg} src={dish.img} alt={dish.title} />
 

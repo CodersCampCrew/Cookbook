@@ -45,8 +45,8 @@ const AddRecipe = () => {
   };
 
   return (
-    <>
-      <SubpageTitle subpageTitle="Create Recipe" className="subpageTitle" />
+    <div className={classes.pageWrapper}>
+      <SubpageTitle subpageTitle="Create Recipe" />
       <div className={classes.formWrapper}>
         <form
           style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
@@ -108,7 +108,7 @@ const AddRecipe = () => {
           <Button submit text="Send Recipe" />
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

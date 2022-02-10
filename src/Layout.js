@@ -5,10 +5,18 @@ import Header from "./container/Header";
 
 const Layout = () => {
   return (
-    <>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "grid",
+        gridTemplateRows: "min-content 1fr"
+      }}
+    >
       <Header />
-      <Outlet />
-    </>
+      <div>
+        <Outlet />
+      </div>
+    </div>
   );
 };
 

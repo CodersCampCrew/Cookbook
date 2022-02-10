@@ -9,10 +9,6 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  .title {
-    color: $primary-color;
-    font-size: 3rem;
-  }
   .recipeImg {
     margin-top: 1%;
     width: 85%;
@@ -42,6 +38,7 @@
       text-align: justify;
     }
   }
+
   .comments {
     margin-bottom: 5%;
     color: $primary-color;

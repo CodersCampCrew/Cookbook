@@ -19,6 +19,7 @@ const GenerateMenuPage = () => {
     handleSubmit,
     formState: { errors }
   } = useForm();
+
   const onSubmit = () => navigate("/generated_menu");
 
   const addTag = () => {
@@ -30,16 +31,18 @@ const GenerateMenuPage = () => {
       setTagsArray([...tagsArray, tagName]);
     }
   };
+
   const handleChange = (event) => {
     setTagName(event.target.value);
   };
+
   const handleRemove = (tag) => {
     setTagsArray(tagsArray.filter((i) => i !== tag));
   };
 
   return (
     <>
-      <SubpageTitle className={classes.subpage} subpageTitle="Generate menu" />
+      <SubpageTitle subpageTitle="Generate menu" />
       <div className={classes.wrapper}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={classes.line}>
@@ -82,4 +85,5 @@ const GenerateMenuPage = () => {
     </>
   );
 };
+
 export default GenerateMenuPage;

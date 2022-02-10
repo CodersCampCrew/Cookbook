@@ -1,13 +1,15 @@
+@import "../../colors.scss";
+
 .subpageTitle {
   margin: 0 2em;
-  padding: 0.3em 0.75em;
+  padding: 0.5em;
   background: none;
-  color: #aeaeae;
-  border-bottom: 1px solid #aeaeae;
-  font-size: 2rem;
+  border-bottom: 1px solid $primary-color;
+  font-size: 3rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   width: 90%;
-  text-align: center;
+  color: $primary-color;
+  text-transform: capitalize;
 }

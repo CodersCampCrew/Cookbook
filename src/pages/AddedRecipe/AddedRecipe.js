@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import classes from "./AddedRecipe.module.scss";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import Button from "../../components/Button/Button";
@@ -7,7 +8,7 @@ import Button from "../../components/Button/Button";
 const AddedRecipe = () => {
   return (
     <>
-      <SubpageTitle subpageTitle="Create Recipe" className="subpageTitle" />
+      <SubpageTitle subpageTitle="Create Recipe" />
       <div className={classes.formWrapper}>
         <pre className={classes.formText}>
           Thank You!
