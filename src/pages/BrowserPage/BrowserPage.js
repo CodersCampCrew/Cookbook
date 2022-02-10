@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
+import IconToSort from "../../components/IconToSort/IconToSort";
+import classes from "./BrowserPage.module.scss";
 
 const BrowserPage = () => {
   const [dishes, setDishes] = useState([]);
@@ -18,7 +20,7 @@ const BrowserPage = () => {
 
   return (
     <>
-      <SubpageTitle subpageTitle={params.mealTime} />
+      <div className={classes.title}><SubpageTitle className={classes.subpageTitle} subpageTitle={params.mealTime} /><IconToSort /></div>
       <ul>
         {dishes.map((dish) => (
           <MealSnapShot
