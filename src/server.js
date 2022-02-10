@@ -249,7 +249,7 @@ const makeServer = () => {
         return schema.dishes.all();
       });
 
-      this.get("dishes/:url", (schema, request) => {
+      this.get("/dishes/:url", (schema, request) => {
         const { url } = request.params;
         return schema.dishes.findBy({ url });
       });
@@ -261,6 +261,11 @@ const makeServer = () => {
       this.post("/dishes", (schema, request) => {
         const attrs = request.requestBody;
         return schema.dishes.create(attrs);
+      });
+
+      this.get("/recommended", (schema) => {
+        const dishes = schema.dishes.all();
+        return dishes.models[Math.floor(Math.random() * dishes.length)];
       });
     }
   });
