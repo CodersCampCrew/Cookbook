@@ -18,7 +18,6 @@ const GeneratedMenuPage = () => {
         setDishArray(json.days);
       });
   }, []);
-  console.log(dishArray);
 
   const handleChange = (e) => {
     setDay(e.target.value);
@@ -31,24 +30,26 @@ const GeneratedMenuPage = () => {
           <DayList onChange={handleChange} />
         </div>
         <ul>
-          {dishArray[day].dishes.map((dish) => (
-            <>
-              <SubpageTitle
-                className={classes.title}
-                subpageTitle={dish.dishType}
-              />
-              <MealSnapShot
-                key={dish.id}
-                id={dish.id}
-                img={dish.img}
-                title={dish.title}
-                kcal={dish.kcal}
-                time={dish.time}
-                shortDesc={dish.shortDesc}
-                onClick={() => navigate(`/dishes/${dish.url}`)}
-              />
-            </>
-          ))}
+          {dishArray
+            .find((dish) => dish.day - 1 === parseInt(day, 10))
+            .dishes.map((dish) => (
+              <>
+                <SubpageTitle
+                  className={classes.title}
+                  subpageTitle={dish.dishType}
+                />
+                <MealSnapShot
+                  key={dish.id}
+                  id={dish.id}
+                  img={dish.img}
+                  title={dish.title}
+                  kcal={dish.kcal}
+                  time={dish.time}
+                  shortDesc={dish.shortDesc}
+                  onClick={() => navigate(`/dishes/${dish.url}`)}
+                />
+              </>
+            ))}
         </ul>
       </>
     )

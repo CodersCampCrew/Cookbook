@@ -1,24 +1,17 @@
 @import "../../colors.scss";
 
-.text-input {
-  height: 2em;
+.textInput {
+  height: 2.5rem;
   width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
   border: 1px solid $primary-color;
-  border-radius: 2em;
-  text-align: center;
+  border-radius: 2rem;
+  text-align: left;
   font-family: Hack, monospace;
-  font-weight: normal;
   font-size: 1rem;
 }
 
 .icon {
-  padding: 10px;
-  padding-left: 0;
-  min-width: 50px;
-  text-align: center;
-}
-
-.textinput-container {
-  padding: 10px 0;
-  display: flex;
+  position: absolute;
+  margin: 0.7rem 0 0 1.5rem;
 }

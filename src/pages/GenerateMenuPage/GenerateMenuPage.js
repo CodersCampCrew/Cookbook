@@ -19,6 +19,7 @@ const GenerateMenuPage = () => {
     handleSubmit,
     formState: { errors }
   } = useForm();
+
   const onSubmit = () => navigate("/generated_menu");
 
   const addTag = () => {
@@ -30,50 +31,59 @@ const GenerateMenuPage = () => {
       setTagsArray([...tagsArray, tagName]);
     }
   };
+
   const handleChange = (event) => {
     setTagName(event.target.value);
   };
+
   const handleRemove = (tag) => {
     setTagsArray(tagsArray.filter((i) => i !== tag));
   };
 
   return (
-    <div className={classes.centered}>
-      <SubpageTitle className={classes.subpage} subpageTitle="Generate menu" />
-      <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-        <div className={classes.line}>
-          <Tag tag="kcal" />
-          <TextInput
-            placeholder=""
-            register={register}
-            regName="kcal"
-            {...register("kcal", { required: true })}
-          />
-        </div>
-        {errors.kcal?.type === "required" && "Number of calories is required"}
-        <div className={classes.line}>
-          <Tag tag="time" />
-          <TextInput
-            placeholder=""
-            register={register}
-            regName="time"
-            {...register("time", { required: true })}
-          />
-        </div>
-        {errors.time?.type === "required" && "Number of calories is required"}
-        <div className={classes.line}>
-          <Tag tag="tags" />
-          <TextInput placeholder="" onChange={handleChange} />
-          <Button text="ADD" onClick={addTag} className={classes.button} />
-        </div>
-        <div className={classes.tags}>
-          <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
-        </div>
-        <div className={classes.submit}>
-          <Button submit text="Generate" />
-        </div>
-      </form>
-    </div>
+    <>
+      <SubpageTitle subpageTitle="Generate menu" />
+      <div className={classes.wrapper}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className={classes.line}>
+            <Tag tag="kcal" />
+            <TextInput
+              placeholder=""
+              register={register}
+              regName="kcal"
+              {...register("kcal", { required: true })}
+            />
+          </div>
+          {errors.kcal?.type === "required" && "Number of calories is required"}
+          <div className={classes.line}>
+            <Tag tag="time" />
+            <TextInput
+              placeholder=""
+              register={register}
+              regName="time"
+              {...register("time", { required: true })}
+            />
+          </div>
+          {errors.time?.type === "required" && "Number of calories is required"}
+          <div className={classes.line}>
+            <Tag tag="tags" />
+            <TextInput
+              placeholder=""
+              onChange={handleChange}
+              className={classes.input}
+            />
+            <Button text="ADD" onClick={addTag} className={classes.button} />
+          </div>
+          <div className={classes.tags}>
+            <TagList tagsArray={tagsArray} handleRemove={handleRemove} />
+          </div>
+          <div className={classes.submit}>
+            <Button submit text="Generate" />
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
+
 export default GenerateMenuPage;

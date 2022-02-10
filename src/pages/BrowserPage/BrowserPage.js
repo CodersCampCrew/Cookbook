@@ -1,15 +1,13 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
-import classes from "./BrowserPage.module.scss";
 
-const BrowserPage = ({ mealTime }) => {
+const BrowserPage = () => {
   const [dishes, setDishes] = useState([]);
 
   const navigate = useNavigate();
-
+  const params = useParams();
   useEffect(() => {
     fetch("/api/dishes")
       .then((res) => res.json())
@@ -17,12 +15,10 @@ const BrowserPage = ({ mealTime }) => {
         setDishes(json.dishes);
       });
   }, []);
-  console.log(dishes);
+
   return (
     <>
-      <div className={classes.centered}>
-        <SubpageTitle className={classes.title} subpageTitle={mealTime} />
-      </div>
+      <SubpageTitle subpageTitle={params.mealTime} />
       <ul>
         {dishes.map((dish) => (
           <MealSnapShot
@@ -39,14 +35,6 @@ const BrowserPage = ({ mealTime }) => {
       </ul>
     </>
   );
-};
-
-BrowserPage.propTypes = {
-  mealTime: PropTypes.string
-};
-
-BrowserPage.defaultProps = {
-  mealTime: "Meal Time"
 };
 
 export default BrowserPage;
