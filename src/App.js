@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import makeServer from "./server";
+// import makeServer from "./server";
 import Layout from "./Layout";
 import AddRecipe from "./pages/AddRecipe/AddRecipe";
 import AddedRecipe from "./pages/AddedRecipe/AddedRecipe";
@@ -12,7 +12,7 @@ import GeneratedMenuPage from "./pages/GeneratedMenuPage/GeneratedMenuPage";
 import RecipePage from "./pages/RecipePage/RecipePage";
 
 const App = () => {
-  makeServer();
+  // makeServer();
 
   return (
     <Routes>
