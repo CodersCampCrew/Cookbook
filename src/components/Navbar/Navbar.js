@@ -82,6 +82,11 @@ const Navbar = () => {
               title: "Generate menu",
               elemBefore: () => <span className={classes.dash}>—</span>,
               itemId: "/generate_menu"
+            },
+            {
+              title: "My cookbook",
+              elemBefore: () => <span className={classes.dash}>—</span>,
+              itemId: "/my_cookbook"
             }
           ]}
         />
