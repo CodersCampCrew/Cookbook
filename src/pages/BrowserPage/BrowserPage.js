@@ -1,7 +1,7 @@
- /* eslint-disable */ 
+/* eslint-disable */
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import instance from '../../axios';
+import instance from "../../axios";
 import MealSnapShot from "../../components/MealSnapShot/MealSnapShot";
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 
@@ -12,7 +12,7 @@ const BrowserPage = () => {
   const params = useParams();
   useEffect(() => {
     const fetchDishes = async () => {
-      const { data: res } = await instance.get('dishes')
+      const { data: res } = await instance.get("dishes");
       setDishes(res);
       console.log(res);
     };
@@ -25,7 +25,6 @@ const BrowserPage = () => {
       <ul>
         {dishes.map((dish) => (
           <MealSnapShot
-          
             key={dish._id}
             id={dish._id}
             img={dish.img}
