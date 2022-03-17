@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 
 import classes from "./HomePage.module.scss";
@@ -7,19 +8,20 @@ import BreakfastImage from "../../assets/breakfast.jpg";
 import LunchImage from "../../assets/lunch.jpg";
 import DinnerImage from "../../assets/dinner.jpg";
 import OthersImage from "../../assets/others.jpg";
+import instance from "../../axios"
 
 const HomePage = () => {
   const [recommendedDish, setRecommendedDish] = useState(null);
 
   useEffect(() => {
     const fetchRecommendedDish = async () => {
-      const res = await fetch(`/api/recommended`);
-      const data = await res.json();
-      setRecommendedDish(data.dish);
+      const {data: res} = await instance.get(`dishes/recommended`)
+      setRecommendedDish(...res);
     };
 
     fetchRecommendedDish();
   }, []);
+
 
   return (
     recommendedDish && (
@@ -27,9 +29,9 @@ const HomePage = () => {
         <h1 className={classes.title}>The CookBook</h1>
         <RecommendedDish
           src={recommendedDish.img}
-          alt={recommendedDish.title}
-          dishName={recommendedDish.title}
-          dishId={recommendedDish.url}
+          alt={recommendedDish.name}
+          dishName={recommendedDish.name}
+          dishId={recommendedDish._id}
         />
         <div className={classes.categoriesContainer}>
           <Dish
