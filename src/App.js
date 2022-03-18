@@ -27,9 +27,9 @@ const App = () => {
         <Route path="/dishes/:dishId" element={<RecipePage />} />
         <Route path="/generate_menu" element={<GenerateMenuPage />} />
         <Route path="/generated_menu" element={<GeneratedMenuPage />} />
-        <Route path="/my_cookbook/mycookbook" element={<MyCookbook />} />
-        <Route path="/my_cookbook/login" element={<LoginPage />} />
-        <Route path="/my_cookbook/register" element={<RegisterPage />} />
+        <Route path="/my_cookbook" element={<MyCookbook />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Route>
     </Routes>
   );
