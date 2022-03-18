@@ -25,9 +25,9 @@ const GenerateMenuPage = () => {
 
   const addTag = () => {
     if (tagName.length === 0 || tagName.length < 3 || tagName.length > 3) {
-      console.log("Tag must have 3 letters and can't be empty");
+      alert("Tag must have 3 letters and can't be empty");
     } else if (tagsArray.includes(tagName)) {
-      console.log("Tag already exist");
+      alert("Tag already exist");
     } else {
       setTagsArray([...tagsArray, tagName]);
     }
