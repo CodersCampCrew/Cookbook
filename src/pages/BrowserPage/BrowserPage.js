@@ -12,7 +12,7 @@ const BrowserPage = () => {
   const params = useParams();
   useEffect(() => {
     const fetchDishes = async () => {
-      const { data: res } = await instance.get('dishes');
+      const { data: res } = await instance.get("dishes");
       setDishes(res);
       console.log(res);
     };
