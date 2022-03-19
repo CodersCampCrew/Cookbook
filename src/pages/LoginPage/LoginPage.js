@@ -65,10 +65,6 @@ const LoginPage = () => {
             text="Login"
           />
         </form>
-        <div className={classes.formSubmitItems}>
-          <h1>Dont have an account?</h1>
-        </div>
-        <Button text="Register" onClick={() => navigate(`/register`)} />
       </div>
     </div>
   );
