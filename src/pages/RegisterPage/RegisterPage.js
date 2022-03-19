@@ -31,7 +31,7 @@ const RegisterPage = () => {
 
   const onSubmit = (data) => {
     fetch("/api/dishes", { method: "POST", body: data });
-    onClick={() => navigate(`/login`)}
+    navigate(`/login`);
   };
 
   return (
