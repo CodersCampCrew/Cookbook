@@ -32,7 +32,7 @@ const BrowserPage = () => {
             kcal={dish.kcal}
             time={dish.time}
             shortDesc={dish.shortDesc}
-            onClick={() => navigate(`/dishes/${dish.name}`)}
+            onClick={() => navigate(`/dishes/${dish._id}`)}
           />
         ))}
       </ul>
