@@ -31,6 +31,7 @@ const RegisterPage = () => {
 
   const onSubmit = (data) => {
     fetch("/api/dishes", { method: "POST", body: data });
+    onClick={navigate(`/login`)}
   };
 
   return (
@@ -85,13 +86,8 @@ const RegisterPage = () => {
           <Button
             submit
             text="Register"
-            onClick={navigate(`/my_cookbook/login`)}
           />
         </form>
-        <div className={classes.formSubmitItems}>
-          <h1>Already registered?</h1>
-        </div>
-        <Button text="Login" onClick={navigate(`/my_cookbook/login`)} />
       </div>
     </div>
   );
