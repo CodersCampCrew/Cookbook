@@ -29,7 +29,7 @@ const LoginPage = () => {
 
   const onSubmit = (data) => {
     fetch("/api/dishes", { method: "POST", body: data });
-    onClick={() => navigate(`/my_cookbook`)}
+    navigate(`/my_cookbook`);
   };
 
   return (
