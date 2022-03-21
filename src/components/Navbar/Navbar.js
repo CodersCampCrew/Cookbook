@@ -90,11 +90,11 @@ const Navbar = () => {
               subNav: [
                 {
                   title: "Login",
-                  itemId: "/my_cookbook/login"
+                  itemId: "/login"
                 },
                 {
                   title: "Register",
-                  itemId: "/my_cookbook/register"
+                  itemId: "/register"
                 }
               ]
             }

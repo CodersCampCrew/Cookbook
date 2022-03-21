@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import instance from "../../axios";
 
 import SubpageTitle from "../../components/SubpageTitle/SubpageTitle";
 import Label from "../../components/Label/Label";
@@ -30,7 +31,10 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    fetch("/api/dishes", { method: "POST", body: data });
+    const registerUser = async () => {
+      await instance.post('register', data)
+    }
+    registerUser();
     navigate(`/login`);
   };
 
@@ -88,6 +92,7 @@ const RegisterPage = () => {
             text="Register"
           />
         </form>
+        <span className={classes.loginLink} onClick={()=>{navigate(`/login`)}}>Already registered? Click to log in!</span>
       </div>
     </div>
   );

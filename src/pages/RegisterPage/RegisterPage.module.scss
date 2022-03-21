@@ -1,7 +1,7 @@
 @import "../../colors.scss";
 
 .pageWrapper {
-  height: 70%;
+  height: 50%;
   display: grid;
   grid-template-rows: min-content 1fr;
 }
@@ -37,4 +37,17 @@
   align-items: center;
   grid-template-columns: min-content 1fr;
   gap: 1em;
+}
+
+.loginLink {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  padding: 1.2em 0;
+  cursor: pointer;
+  
+  &:hover {
+    color: $secondary-color;
+  }
 }
