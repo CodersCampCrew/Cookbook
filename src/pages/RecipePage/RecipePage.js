@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import instance from "../../axios";
 import Label from "../../components/Label/Label";
 import Comments from "../../components/Comments/Comments";
@@ -9,13 +9,19 @@ import classes from "./RecipePage.module.scss";
 
 const RecipePage = () => {
   const [dish, setDish] = useState(null);
-  // const params = useParams();
-  // const { dishId } = params;
+  const params = useParams();
+  const { dishId } = params;
 
   useEffect(() => {
     const getSingleRecipe = async () => {
-      const {data: res} = await instance.get(`dishes/`)
-      setDish(...res);
+      const {data: res} = await instance.get(`dishes/${dishId}`)
+
+      const lodadedRecipe = {
+        id: dishId,
+        ...res
+      }
+
+      setDish(lodadedRecipe);
     };
     getSingleRecipe();
   }, []);
