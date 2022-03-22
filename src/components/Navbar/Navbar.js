@@ -35,7 +35,7 @@ const Navbar = () => {
       >
         <Navigation
           onSelect={({ itemId }) => {
-            if (itemId !== "/recipes") {
+            if (itemId !== "/recipes" && itemId !== "/my_cookbook") {
               navigate(itemId);
               setOpen(false);
             }
@@ -82,6 +82,21 @@ const Navbar = () => {
               title: "Generate menu",
               elemBefore: () => <span className={classes.dash}>—</span>,
               itemId: "/generate_menu"
+            },
+            {
+              title: "My Cookbook",
+              itemId: "/my_cookbook",
+              elemBefore: () => <span className={classes.dash}>—</span>,
+              subNav: [
+                {
+                  title: "Login",
+                  itemId: "/my_cookbook/login"
+                },
+                {
+                  title: "Register",
+                  itemId: "/my_cookbook/register"
+                }
+              ]
             }
           ]}
         />

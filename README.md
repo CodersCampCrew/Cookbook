@@ -17,7 +17,7 @@
 
 ## Cookbook 📙
 
-    Is an innovative version of the cookbook where you can add and also find new delicious dishes
+  Is an innovative version of the cookbook where you can add and also find new delicious dishes
 
 ## Demo 📺
 

@@ -39,7 +39,7 @@ const AddRecipe = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const navigate = useNavigate();
-  console.log(errors);
+
   const onSubmit = (data) => {
     
     instance.post('dishes/create', data)
