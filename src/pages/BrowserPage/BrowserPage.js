@@ -12,12 +12,12 @@ const BrowserPage = () => {
   const params = useParams();
   useEffect(() => {
     const fetchDishes = async () => {
-      const { data: res } = await instance.get("dishes");
+      const { data: res } = await instance.get(`dishes/${params.mealTime}`);
       setDishes(res);
       console.log(res);
     };
     fetchDishes();
-  }, []);
+  }, [setDishes, params.mealTime]);
 
   return (
     <>
